@@ -1,0 +1,24 @@
+.button {
+  min-width: 280px;
+  height: 40px;
+
+  font-family: @font-main, @font-second, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-subtitle-third;
+
+  background-color: @color-link-main;
+  border: none;
+
+  &:hover {
+    background-color: @color-link-second;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(@color-subtitle-third, 0.3);
+    cursor: pointer;
+  }
+}

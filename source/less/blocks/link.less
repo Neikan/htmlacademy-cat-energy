@@ -1,0 +1,37 @@
+.link {
+  display: block;
+  min-width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  padding-top: 11px;
+
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-subtitle-third;
+
+  background-color: @color-link-main;
+
+  &:hover {
+    background-color: @color-link-second;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(@color-subtitle-third, 0.3);
+    cursor: pointer;
+  }
+}
+
+.link--all-items {
+  background-color: @color-link-all-main;
+  color: @color-text;
+  &:hover {
+    background-color: @color-link-all-second
+  }
+  &:active {
+    color: rgba(@color-text, 0.3)
+  }
+}

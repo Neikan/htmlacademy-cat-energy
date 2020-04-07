@@ -1,0 +1,95 @@
+.good-main {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.good-main__info {
+  display: flex;
+
+  &--more {
+    flex-direction: column;
+  }
+}
+
+//.good-main__image {}
+
+.good-main__text {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  margin-top: 5px;
+}
+
+.good-main__title {
+  width: 80px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.good-main__details-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.good-main__details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.good-main__value {
+  margin: 0;
+  padding: 0;
+
+  font-family: @font-second;
+  font-size: 12px;
+  line-height: 16px;
+  color: @color-text;
+
+  &--text-upper {
+    text-transform: uppercase;
+  }
+}
+
+//.good-main__order-link {}
+
+.good-main__more {
+  padding-top: 55px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  // Доработать
+  &::before {
+    display: block;
+    top: 220;
+    left: 420;
+    //margin-top: 50px;
+    content: url("../img/icon-plus-mobile.svg");
+    height: 30px;
+    width: 30px;
+    fill: @color-svg-five;
+    //background-image:
+  }
+}
+
+.good-main__description {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  text-align: center;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: @color-text;
+}

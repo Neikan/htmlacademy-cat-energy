@@ -1,0 +1,114 @@
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu-list__item {
+  display: flex;
+
+  border-top: 1px solid @color-border-menu;
+
+  &:last-of-type {
+    border-bottom: 1px solid @color-border-menu;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .menu-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-list__item {
+    border: none;
+  }
+}
+
+@media (min-width: @width-desktop) {
+
+}
+
+.menu-list__link {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 6px;
+
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-subtitle-main;
+
+  &[href]:hover {
+    color: rgba(@color-subtitle-main, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba(@color-subtitle-main, 0.3);
+  }
+
+  &--active {
+    padding-bottom: 4px;
+    border-bottom: 2px solid @color-border-menu-link;
+    cursor: default;
+  }
+}
+
+
+
+// @media (min-width: @width-tablet) {
+//   .menu-list {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   .menu-list__item {
+//     border: none;
+//     margin-left: 35px;
+//     margin-top: 10px;
+
+//     &:last-of-type {
+//       border-bottom: none;
+//     }
+//   }
+
+//   .menu-list__link {
+//     font-size: 18px;
+//     line-height: 25px;
+//     color: @color-subtitle-second;
+//     padding-bottom: 6px;
+
+//     &--active {
+//       border-bottom: 2px solid @color-border-menu-link;
+//       cursor: default;
+//     }
+//   }
+// }
+
+// @media (min-width: @width-desktop) {
+//   .menu-list--main-page .menu-list__link {
+
+//     font-size: 20px;
+//     line-height: 25px;
+//     color: @color-subtitle-desktop;
+
+//     &--active {
+//       border-bottom: 2px solid @color-border-menu-link-desktop;
+//     }
+
+//     &[href]:hover {
+//       color: rgba(@color-subtitle-desktop, 0.6);
+//     }
+
+//     &[href]:active {
+//       color: rgba(@color-subtitle-desktop, 0.3);
+//     }
+//   }
+// }
