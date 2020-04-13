@@ -1,14 +1,27 @@
 'use strict';
 
-var navigation = document.querySelector(".navigation");
-var navigationToggle = document.querySelector(".navigation__toggle");
+const Classes = {
+  NO_JS: 'navigation--no-js',
+  OPENED: 'navigation--opened',
+  CLOSED: 'navigation--closed'
+}
 
-navigation.classList.add("visually-hidden");
+const navigation = document.querySelector(".navigation");
+const toggle = document.querySelector(".navigation__toggle");
 
-navigationToggle.addEventListener("click", function() {
-  if (navigation.classList.contains("visually-hidden")) {
-    navigation.classList.remove("visually-hidden");
+navigation.classList.remove(Classes.NO_JS);
+
+// Не забыть убрать:
+// navigation.classList.remove(Classes.CLOSED);
+
+const toggleClickHandler = () => {
+  if (navigation.classList.contains(Classes.CLOSED)) {
+    navigation.classList.remove(Classes.CLOSED);
+    navigation.classList.add(Classes.OPENED);
   } else {
-    navigation.classList.add("visually-hidden");
+    navigation.classList.add(Classes.CLOSED);
+    navigation.classList.remove(Classes.OPENED);
   }
-});
+};
+
+toggle.addEventListener('click', toggleClickHandler);

@@ -1,19 +1,14 @@
-// Семейства шрифтов
-@font-main: "Oswald";
-@font-second: "Arial";
-
-// Цвета
+/* ----------------------------------------------------------- */
+/* Блок 1: Consts of colors
+/* ----------------------------------------------------------- */
 @color-white: #FFFFFF;
-
 @color-green: #68B738;
 @color-green-one: #5EAA2F;
-
+@color-green-two: #56A327;
 @color-red: #FF8282;
-
 @color-black: #000000;
 @color-black-one: #111111;
 @color-black-two: #222222;
-
 @color-grey: #444444;
 @color-grey-one: #666666;
 @color-grey-two: #BABABA;
@@ -24,9 +19,98 @@
 @color-grey-seven: #EDEDED;
 @color-grey-eighth: #F2F2F2;
 @color-grey-ninth: #DADADA;
+/* ----------------------------------------------------------- */
+/* Блок 2: Font's parameters
+/* ----------------------------------------------------------- */
+@font-main: "Oswald", "Arial", sans-serif;
+@font-second: "Arial", sans-serif;
+@font-weight-default: 400;
+@font-weight-bold: 500;
+@font-size-default: 16px;
+@line-height-default: 20px;
+@font-color-dafault: @color-black;
+/* ----------------------------------------------------------- */
+/* Блок 3: Element's colors
+/* ----------------------------------------------------------- */
+// 4C8926
 
-// Фоны
-@color-back-main: @color-white;
+// 518E27
+// @color-outline: rgb(86, 163, 39);
+@color-outline: @color-green-two;
+
+/* ----------------------------------------------------------- */
+/* 3.1: Navigation
+/* ----------------------------------------------------------- */
+@color-nav-border: @color-grey-five;
+@color-nav-link-text: @color-black-one;
+@color-nav-link-active: @color-green;
+@color-nav-toggle: @color-black-two;
+@color-nav-toggle-outline: @color-green-two;
+/* ----------------------------------------------------------- */
+/* 3.2: Footer
+/* ----------------------------------------------------------- */
+@color-footer-background: @color-grey-eighth;
+@color-footer-border: @color-grey-ninth;
+@color-footer-svg-default: @color-grey-one;
+@color-footer-hover: @color-green;
+@color-footer-link-text: @color-grey;
+
+/* ----------------------------------------------------------- */
+/* 3.3: Footer-social
+/* ----------------------------------------------------------- */
+@color-social-background-desktop: @color-white;
+
+
+/* ----------------------------------------------------------- */
+/* 3.4: Slider
+/* ----------------------------------------------------------- */
+@color-slider-background: @color-white;
+
+
+/* ----------------------------------------------------------- */
+/* 3.5: Links
+/* ----------------------------------------------------------- */
+@color-link-text: @color-white;
+@color-link-background: @color-green;
+@color-link-background-hover: @color-green-one;
+@color-link-text-all: @color-grey;
+@color-link-background-all: @color-grey-eighth;
+@color-link-background-hover-all: @color-grey-six;
+/* ----------------------------------------------------------- */
+/* 3.6: Buttons
+/* ----------------------------------------------------------- */
+@color-button-text: @color-white;
+@color-button-background: @color-green;
+@color-button-background-hover: @color-green-one;
+
+/* ----------------------------------------------------------- */
+/* 3.7: Main
+/* ----------------------------------------------------------- */
+@color-main-text: @color-black-one;
+@color-main-border: @color-grey-five;
+
+
+/* ----------------------------------------------------------- */
+/* 3.8: Goods
+/* ----------------------------------------------------------- */
+@color-goods-text: @color-grey;
+@colot-goods-title: @color-black-one;
+@color-goods-border: @color-grey-seven;
+
+@color-goods-background-tablet: @color-grey-eighth;
+@color-goods-border-details: @color-grey-four;
+
+/* ----------------------------------------------------------- */
+/* 3.9: Catalog
+/* ----------------------------------------------------------- */
+@color-catalog-background-tablet: @color-grey-eighth;
+
+
+/* ----------------------------------------------------------- */
+/* 3.9: Промо-акция
+/* ----------------------------------------------------------- */
+
+
 @color-back-second: @color-grey-eighth;
 @color-back-third: @color-green;
 @color-back-fourth: @color-green-one;
@@ -43,9 +127,9 @@
 @color-border-check: @color-grey-three;
 @color-border-check-hover: @color-grey-two;
 
-@color-border-catalog: @color-grey-seven;
+
 @color-border-add: @color-grey-four;
-@color-border-footer: @color-grey-ninth;
+
 
 // Заголовки и текст
 @color-subtitle-main: @color-black-one;
@@ -54,10 +138,7 @@
 @color-text: @color-grey;
 
 // Ссылки
-@color-link-main: @color-green;
-@color-link-second: @color-green-one;
-@color-link-all-main: @color-grey-eighth;
-@color-link-all-second: @color-grey-six;
+
 
 // SVG
 @color-svg-main: @color-grey-one;
@@ -71,7 +152,11 @@
 @color-input-active: @color-grey;
 @color-check-active: @color-green;
 
-// Размеры устройств
+
+/* ----------------------------------------------------------- */
+/* Блок 4: Размеры устройств
+/* ----------------------------------------------------------- */
+@width-mobile-min: 320px;
 @width-mobile-max: 767px;
 @width-tablet: 768px;
 @width-desktop: 1300px;

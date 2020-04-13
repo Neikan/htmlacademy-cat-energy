@@ -1,44 +1,28 @@
 .social {
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
+  margin: 0 20px;
 }
 
 .social__list {
+  .list-reset;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
 
-  list-style: none;
-
-  border-top: 1px solid @color-border-footer;
-  border-bottom: 1px solid @color-border-footer;
-}
-
-.social__item {
-  display: flex;
-  align-items: center;
-  height: 62px;
-
-  margin: 0;
-  padding: 0;
+  border-top: 1px solid @color-footer-border;
+  border-bottom: 1px solid @color-footer-border;
 }
 
 .social__link {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
 
   & svg {
-    fill: @color-svg-main;
-
-    &:hover {
-      fill: @color-svg-second;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    fill: @color-footer-svg-default;
   }
 
   &--vk svg {
@@ -48,12 +32,25 @@
 
   &--instagram svg {
     width: 17px;
-    height: 17px;
+    height: 18px;
   }
 
   &--facebook svg {
     width: 10px;
     height: 19px;
+  }
+
+  &:hover svg {
+    fill: @color-footer-hover;
+  }
+
+  &:focus {
+    outline: 2px solid @color-outline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none
   }
 }
 
@@ -71,12 +68,17 @@
 
     &--instagram svg {
       width: 23px;
-      height: 23px;
+      height: 24px;
     }
 
     &--facebook svg {
       width: 14px;
       height: 28px;
+    }
+
+    &--facebook {
+      padding-right: 15px;
+      padding-bottom: 4px;
     }
   }
 }

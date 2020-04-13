@@ -14,19 +14,23 @@
       <!-- Блок 1.1. Лого и навигация -->
       <div class="header__wrapper">
         <a class="header__logo-link" href="index.html">
-          <img class="header__logo-image" src="./img/logo-mobile.svg" width="192" height="100%" alt="Cat Energy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+            <img class="header__logo-image" src="./img/logo-mobile.svg" width="192" height="100%" alt="Cat Energy">
+          </picture>
         </a>
-        <nav class="navigation">
+        <nav class="header__navigation navigation navigation--no-js navigation--closed">
           <button class="navigation__toggle" type="button"></button>
-          <ul class="navigation__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="index.html" aria-label="Главная" title="Главная">Главная</a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html" aria-label="Главная" title="Главная">Главная</a>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link menu-list__link--active">Каталог продукции</a>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--active">Каталог продукции</a>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html" aria-label="Подбор программы" title="Подбор программы">Подбор программы</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html" aria-label="Подбор программы" title="Подбор программы">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -41,13 +45,19 @@
           <!-- 1й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 500 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/chicken-small-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/chicken-small-tablet@1x.png">
+                  <img class="good-main__image good-main__image--small" src="./img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 500 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Pro 500 г</h3>
+                <h3 class="good-main__title">Cat Energy Pro 500&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
-                    <p class="good-main__value">500 г</p>
+                    <p class="good-main__value">500&nbsp;г</p>
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Вкус</p>
@@ -55,7 +65,7 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">700 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">700&nbsp;р.</p>
                   </div>
                 </div>
               </div>
@@ -65,13 +75,19 @@
           <!-- 2й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 1000 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/chicken-big-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/chicken-big-tablet@1x.png">
+                  <img class="good-main__image good-main__image--large" src="./img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом курицы, 1000 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Pro 1000 г</h3>
+                <h3 class="good-main__title">Cat Energy Pro 1000&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
-                    <p class="good-main__value">1000 г</p>
+                    <p class="good-main__value">1000&nbsp;г</p>
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Вкус</p>
@@ -79,7 +95,7 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">1000 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">1000&nbsp;р.</p>
                   </div>
                 </div>
               </div>
@@ -89,9 +105,15 @@
           <!-- 3й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/fish-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 500 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/fish-small-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/fish-small-tablet@1x.png">
+                  <img class="good-main__image good-main__image--small" src="./img/fish-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 500 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Pro 500 г</h3>
+                <h3 class="good-main__title">Cat Energy Pro 500&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
@@ -103,9 +125,8 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">700 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">700&nbsp;р.</p>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -114,13 +135,19 @@
           <!-- 4й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 1000 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/fish-big-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/fish-big-tablet@1x.png">
+                  <img class="good-main__image good-main__image--large" src="./img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом рыбы, 1000 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Pro 1000 г</h3>
+                <h3 class="good-main__title">Cat Energy Pro 1000&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
-                    <p class="good-main__value">1000 г</p>
+                    <p class="good-main__value">1000&nbsp;г</p>
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Вкус</p>
@@ -128,9 +155,8 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">1000 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">1000&nbsp;р.</p>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -139,9 +165,15 @@
           <!-- 5й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом гречки, 500 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/buckwheat-small-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/buckwheat-small-tablet@1x.png">
+                  <img class="good-main__image good-main__image--small" src="./img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом гречки, 500 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Slim 500 г</h3>
+                <h3 class="good-main__title">Cat Energy Slim 500&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
@@ -153,9 +185,8 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">400 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">400&nbsp;р.</p>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -164,13 +195,19 @@
           <!-- 6й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом гречки, 1000 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/buckwheat-big-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/buckwheat-big-tablet@1x.png">
+                  <img class="good-main__image good-main__image--large" src="./img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом гречки, 1000 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Slim 1000 г</h3>
+                <h3 class="good-main__title">Cat Energy Slim 1000&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
-                    <p class="good-main__value">1000 г</p>
+                    <p class="good-main__value">1000&nbsp;г</p>
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Вкус</p>
@@ -178,7 +215,7 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">700 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">700&nbsp;р.</p>
                   </div>
                 </div>
               </div>
@@ -188,13 +225,19 @@
           <!-- 7й -->
           <li class="catalog__good-main good-main">
             <div class="good-main__info">
-              <img class="good-main__image" src="./img/rice-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом риса, 500 гр.">
+              <a class="good-main__item-link" href="#">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="./img/rice-small-desktop@1x.png">
+                  <source media="(min-width: 768px)" srcset="./img/rice-small-tablet@1x.png">
+                  <img class="good-main__image good-main__image--small" src="./img/rice-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro со вкусом риса, 500 гр.">
+                </picture>
+              </a>
               <div class="good-main__text">
-                <h3 class="good-main__title">Cat Energy Slim 500 г</h3>
+                <h3 class="good-main__title">Cat Energy Slim 500&nbsp;г</h3>
                 <div class="good-main__details-wrapper">
                   <div class="good-main__details">
                     <p class="good-main__value">Объем</p>
-                    <p class="good-main__value">500 г</p>
+                    <p class="good-main__value">500&nbsp;г</p>
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Вкус</p>
@@ -202,7 +245,7 @@
                   </div>
                   <div class="good-main__details">
                     <p class="good-main__value">Цена</p>
-                    <p class="good-main__value good-main__value--text-upper">500 р.</p>
+                    <p class="good-main__value good-main__value--text-upper">500&nbsp;р.</p>
                   </div>
                 </div>
               </div>
@@ -215,7 +258,7 @@
               <p class="good-main__more">Показать еще 100500 товаров</p>
               <p class="good-main__description">На самом деле вкусов гораздо больше!</p>
             </div>
-            <a class="good-main__order-link link link--all-good-mains" href="#" aria-label="Показать все" title="Показать все">Показать все</a>
+            <a class="good-main__order-link link--all-items" href="#" aria-label="Показать все" title="Показать все">Показать все</a>
           </li>
         </ul>
       </section>
@@ -229,8 +272,8 @@
           <li class="additional-goods__good-main good-add">
             <h3 class="good-add__title">Сахарозаменитель</h3>
             <div class="good-add__info">
-              <p class="good-add__detail">1 упаковка (100 г)</p>
-              <p class="good-add__cost">200 р.</p>
+              <p class="good-add__detail">1&nbsp;упаковка (100&nbsp;г)</p>
+              <p class="good-add__cost">200&nbsp;р.</p>
             </div>
             <a class="good-add__order-link link" href="#" aria-label="Заказать" title="Заказать">Заказать</a>
           </li>
@@ -238,8 +281,8 @@
           <li class="additional-goods__good-main good-add">
             <h3 class="good-add__title">Питьевая вода</h3>
             <div class="good-add__info">
-              <p class="good-add__detail">5 литров</p>
-              <p class="good-add__cost">50 р.</p>
+              <p class="good-add__detail">5&nbsp;литров</p>
+              <p class="good-add__cost">50&nbsp;р.</p>
             </div>
             <a class="good-add__order-link link" href="#" aria-label="Заказать" title="Заказать">Заказать</a>
           </li>
@@ -247,8 +290,8 @@
           <li class="additional-goods__good-main good-add">
             <h3 class="good-add__title">Молоко</h3>
             <div class="good-add__info">
-              <p class="good-add__detail">1 литр</p>
-              <p class="good-add__cost">100 р.</p>
+              <p class="good-add__detail">1&nbsp;литр</p>
+              <p class="good-add__cost">100&nbsp;р.</p>
             </div>
             <a class="good-add__order-link link" href="#" aria-label="Заказать" title="Заказать">Заказать</a>
           </li>
@@ -256,8 +299,8 @@
           <li class="additional-goods__good-main good-add">
             <h3 class="good-add__title">Витамины</h3>
             <div class="good-add__info">
-              <p class="good-add__detail">1 упаковка (30 г)</p>
-              <p class="good-add__cost">300 р.</p>
+              <p class="good-add__detail">1&nbsp;упаковка (30&nbsp;г)</p>
+              <p class="good-add__cost">300&nbsp;р.</p>
             </div>
             <a class="good-add__order-link link" href="#" aria-label="Заказать" title="Заказать">Заказать</a>
           </li>
@@ -275,10 +318,10 @@
     <footer class="footer">
       <div class="footer__contacts contacts">
         <div class="contacts__info">
-          <p class="contacts__description">Приглашаем </br> к сотрудничеству </br>дилеров!</p>
+          <p class="contacts__description">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="contacts__address">
-            <p>ул. Большая </br> Конюшенная, д. 19/8</p>
-            <p>Санкт-Петербург</p>
+            <p class="contacts__street">ул. Большая Конюшенная, д.&nbsp;19&#47;8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
           </div>
         </div>
         <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585667087796!5m2!1sru!2sru" width="320" height="400" style="border:0;" allowfullscreen="" aria-hidden="false"></iframe>
@@ -286,14 +329,14 @@
 
       <div class="footer__wrapper">
         <div class="footer__logo">
-          <a class="footer__logo-link">
+          <a class="footer__logo-link" href="index.html" aria-label="Cat Energy" title="Cat Energy">
             <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
           </a>
         </div>
 
         <div class="footer__social social">
           <ul class="social__list">
-            <li class="social__good-main">
+            <li class="social__item">
               <a class="social__link social__link--vk" href="#" aria-label="Вконтакте" title="Вконтакте"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -312,7 +355,7 @@
               </svg>
               </a>
             </li>
-            <li class="social__good-main">
+            <li class="social__item">
               <a class="social__link social__link--instagram" href="#" aria-label="Instagram" title="Instagram"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
@@ -322,7 +365,7 @@
                 <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
               </svg></a>
             </li>
-            <li class="social__good-main">
+            <li class="social__item">
               <a class="social__link social__link--facebook" href="#" aria-label="Facebook" title="Facebook"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
@@ -341,6 +384,6 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="js/menu.js"></script> -->
+    <script src="js/menu.js"></script>
   </body>
 </html>

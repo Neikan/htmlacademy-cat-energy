@@ -1,24 +1,16 @@
-// .header {
-//   // display: flex;
-//   // flex-grow: 1;
-//   // flex-direction: column;
-// }
+// .header {}
 
 .header__wrapper {
-  margin: 0;
+  position: relative;
+  margin: 0 auto;
   padding: 0;
-  // display: flex;
-  // flex-direction: column;
-  // flex-grow: 1;
-  // justify-content: space-between;
-  // padding-right: 20px;
-  // padding-left: 20px;
 }
 
 .header__logo-link {
-  // min-height: 65px;
-  // margin-top: 20px;
-  // margin-bottom: 20px;
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 
   &[href]:hover {
     opacity: 0.8;
@@ -31,3 +23,22 @@
 
 //.header__navigation {}
 //.header__promotion {}
+
+@media (min-width: @width-tablet) {
+  .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  // .header__navigation {
+  //   margin-top: 0;
+  //   padding: 0;
+  // }
+}
+
+// @media (min-width: @width-desktop) {
+
+// }
