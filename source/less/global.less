@@ -19,37 +19,30 @@ img {
   height: auto;
 }
 
-.link-reset {
-  text-decoration: none;
-  text-transform: uppercase;
-}
+.container {
+  margin: 0 auto;
 
-.list-reset {
-  margin: 0;
-  padding: 0;
+  @media (min-width: @width-mobile-min) {
+    width: 88%;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
 
-  list-style: none;
-}
+  @media (min-width: @width-tablet) {
+    @width-tablet: 92%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
 
-
-
-//.container {}
-
-// @media (min-width: @width-tablet) {
-//   .container {
-//   }
-// }
-
-@media (min-width: @width-desktop) {
-  .container {
-    max-width: @width-desktop;
+  @media (min-width: @width-desktop) {
+    width: @width-desktop;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
 // @media (min-width: @width-tablet) {
-
 // }
 
 // @media (min-width: @width-desktop) {
-
 // }

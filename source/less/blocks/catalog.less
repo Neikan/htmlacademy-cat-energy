@@ -8,6 +8,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    // width: 90%;
+    // margin: 0 auto;
   }
 
   .catalog__good-main {
@@ -17,8 +19,14 @@
 }
 
 @media (min-width: @width-desktop) {
+  .catalog__list {
+    .container;
+
+    margin: 0 auto;
+  }
+
   .catalog__good-main {
-    width: 25%;
+    width: 245px;
     margin: auto;
   }
 }
