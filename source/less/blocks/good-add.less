@@ -4,38 +4,36 @@
   margin: 20px 0;
 
   border-top: 1px solid @color-goods-border-details;
-  border-top: 1px solid @color-goods-border-details;
 
   &:last-of-type {
     border-bottom: 1px solid @color-goods-border-details;
   }
 }
 
+
 .good-add__title {
   margin: 0;
   margin-top: 20px;
 
-  font-weight: @font-weight-default;
-  font-size: 16px;
-  line-height: 16px;
+  .oswald(16px, 16px);
   text-transform: uppercase;
   color: @color-goods-subtitle;
 }
+
 
 .good-add__info {
   display: flex;
   justify-content: space-between;
   margin: 0;
 
-  font-family: @font-second;
-  font-size: 14px;
-  line-height: 14px;
-  color: @color-goods-text;
+  .arial(14px, 14px);
 }
+
 
 .good-add__detail {
   text-align: left;
 }
+
 
 .good-add__cost {
   text-transform: uppercase;
@@ -51,10 +49,12 @@
     border-right: 1px solid @color-goods-border-details;
     border-left: 1px solid @color-goods-border-details;
 
+    // проверить границу у последнего элемента в мобильной версии
     &:last-of-type {
       border-bottom: 1px solid @color-goods-border-details;
     }
   }
+
 
   .good-add__wrapper {
     display: flex;
@@ -63,49 +63,51 @@
     align-items: flex-end;
   }
 
+
   .good-add__title {
     margin-bottom: 20px;
-    font-size: 20px;
-    line-height: 20px;
+    .oswald(20px, 20px);
   }
+
 
   .good-add__info {
     flex-direction: row;
 
-    font-size: 16px;
-    line-height: 20px;
+    .arial(16px, 20px);
     text-align: right;
   }
+
 
   .good-add__cost {
     width: 95px;
   }
+
 
   .good-add__order-link {
     width: 100%;
     margin-bottom: 27px;
     padding: 10px 0;
   }
-
 }
+
 
 @media (min-width: @width-desktop) {
   .good-add {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     // width: 56%;
-
     border-right: none;
     border-left: none;
   }
+
 
   .good-add__wrapper {
     flex-grow: 1;
     // width: 65%;
     margin-right: 40px;
   }
+
 
   .good-add__order-link {
     width: 245px;

@@ -9,26 +9,25 @@
   background-color: @color-back-second;
 }
 
+
 .example__title {
   margin: 0;
   padding-top: 0;
   padding-left: 20px;
 
-  font-size: 36px;
-  line-height: 60px;
+  .oswald(36px, 60px);
   text-align: left;
 }
+
 
 .example__text {
   margin-top: 23px;
   margin-right: 30px;
   margin-left: 20px;
 
-  font-family: @font-second;
-  font-size: 14px;
-  line-height: 18px;
-  color: @color-text;
+  .arial();
 }
+
 
 .example__details {
   display: flex;
@@ -38,6 +37,7 @@
   left: 0;
   margin-top: 25px;
 }
+
 
 .example__description {
   display: flex;
@@ -49,60 +49,58 @@
   margin-right: 20px;
   padding-top: 13px;
 
-  border-top: 1px solid @color-border-example;
-  border-right: 1px solid @color-border-example;
-  border-left: 1px solid @color-border-example;
+  border-top: 1px solid @color-example-border;
+  border-right: 1px solid @color-example-border;
+  border-left: 1px solid @color-example-border;
   border-radius: 3px;
 
   background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg'><line x1='0' y1='0' x2='130' y2='0' stroke='gainsboro' stroke-width='2' stroke-dasharray='18 82 18' /></svg>");
   background-position: 0 -1px;
 }
 
+
 .example__weight {
   display: flex;
   text-align: center;
   flex-direction: column;
   margin: 0;
-  font-size: 24px;
-  line-height: 24px;
+  .oswald(24px, 24px);
   text-transform: uppercase;
 }
+
 
 .example__dowmweight {
   width: 80px;
   margin: 0 auto;
   margin-top: 10px;
 
-  font-family: @font-second;
-  font-size: 12px;
-  line-height: 12px;
+  .arial(12px, 12px);
   text-align: center;
   text-transform: lowercase;
-  color: @color-text;
 }
+
 
 .example__time {
   display: flex;
   text-align: center;
   flex-direction: column;
   margin: 0;
-  font-size: 24px;
-  line-height: 24px;
+
+  .oswald(24px, 24px);
   text-transform: uppercase;
 }
+
 
 .example__downtime {
   width: 80px;
   margin: 0 auto;
   margin-top: 10px;
 
-  font-family: @font-second;
-  font-size: 12px;
-  line-height: 12px;
+  .arial(12px, 12px);
   text-align: center;
   text-transform: lowercase;
-  color: @color-text;
 }
+
 
 .example__cost {
   display: flex;
@@ -110,11 +108,11 @@
   margin: 0 auto;
   margin-top: 35px;
 
-  font-size: 14px;
-  line-height: 20px;
+  .oswald(14px, 20px);
   text-transform: uppercase;
   text-align: center;
 }
+
 
 .example__slider {
   padding-top: 30px;

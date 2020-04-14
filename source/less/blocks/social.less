@@ -3,6 +3,7 @@
   margin: 0 20px;
 }
 
+
 .social__list {
   .list-reset;
 
@@ -12,6 +13,7 @@
   border-top: 1px solid @color-footer-border;
   border-bottom: 1px solid @color-footer-border;
 }
+
 
 .social__link {
   display: flex;
@@ -45,12 +47,12 @@
   }
 
   &:focus {
-    outline: 2px solid @color-outline;
+    .outline;
   }
 
   &:active {
     opacity: 0.3;
-    outline: none
+    outline: none;
   }
 }
 
@@ -59,6 +61,7 @@
   .social__list {
     border: none;
   }
+
 
   .social__link {
     &--vk svg {

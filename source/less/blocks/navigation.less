@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 .navigation__list {
   .list-reset;
 
@@ -12,17 +13,21 @@
   text-align: center;
 }
 
+
 .navigation--closed .navigation__list {
   display: none;
 }
+
 
 .navigation--no-js .navigation__list {
   display: block;
 }
 
+
 .navigation__item {
   border-top: 1px solid @color-nav-border;
 }
+
 
 .navigation__link {
   .link-reset;
@@ -31,9 +36,7 @@
   padding-top: 23px;
   padding-bottom: 22px;
 
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: @font-weight-bold;
+  .oswald(20px, 20px, @font-weight-bold);
   color: @color-nav-link-text;
 
   &[href]:hover,
@@ -42,7 +45,7 @@
   }
 
   &[href]:focus {
-    outline: 2px solid @color-outline;
+    .outline;
   }
 
   &[href]:active {
@@ -50,6 +53,7 @@
     outline: none;
   }
 }
+
 
 .navigation__toggle {
   position: absolute;
@@ -68,13 +72,15 @@
 
   &:active,
   &:focus {
-    outline: 2px solid @color-outline;
+    .outline;
   }
 }
+
 
 .navigation--no-js .navigation__toggle {
   display: none;
 }
+
 
 .navigation--closed .navigation__toggle::before {
   position: absolute;
@@ -89,6 +95,7 @@
     0 16px 0 0 @color-nav-toggle;
 }
 
+
 .navigation--opened .navigation__toggle::before,
 .navigation--opened .navigation__toggle::after {
   position: absolute;
@@ -100,14 +107,17 @@
   background-color: @color-nav-toggle;
 }
 
+
 .navigation--opened .navigation__toggle::before {
   transform: rotate(45deg);
   box-shadow: none;
 }
 
+
 .navigation--opened .navigation__toggle::after {
   transform: rotate(-45deg);
 }
+
 
 @media (min-width: @width-tablet) {
   .navigation--no-js {
@@ -129,12 +139,11 @@
     }
   }
 
+
   .navigation__link {
     padding: 6px 0;
 
-    font-weight: @font-weight-default;
-    font-size: 18px;
-    line-height: 25px;
+    .oswald(18px, 25px);
 
     border: none;
 
@@ -153,19 +162,21 @@
     }
   }
 
+
   .navigation__toggle {
     display: none;
   }
 }
 
+
 @media (min-width: @width-desktop) {
   .navigation__item {
     margin-right: 34px;
   }
+  
 
   .navigation__link {
-    font-size: 20px;
-    line-height: 25px;
+    .oswald(20px, 25px);
 
     &--active::after {
       background-color: @color-nav-link-active;

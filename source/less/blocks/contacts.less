@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // margin: 0;
 }
+
 
 .contacts__info {
   display: flex;
@@ -15,17 +15,17 @@
   padding-bottom: 26px;
 }
 
+
 .contacts__description {
   width: 140px;
   margin: 0;
   padding: 0;
 
-  font-size: 16px;
-  line-height: 20px;
+  .oswald(16px, 20px);
   text-align: left;
   text-transform: uppercase;
-  color: @color-subtitle-main;
 }
+
 
 .contacts__address {
   display: flex;
@@ -34,17 +34,16 @@
 
   width: 140px;
 
-  font-family: @font-second;
-  font-size: 14px;
-  line-height: 20px;
+  .arial(14px, 20px);
   text-align: left;
-  color: @color-text;
 }
+
 
 .contacts__street,
 .contacts__city {
   margin: 0;
 }
+
 
 .contacts__map {
   margin: 0;
@@ -52,6 +51,7 @@
   height: 400px;
   width: 100%;
 
+  // добавить пин
   background-image: url("../img/bg-map-mobile@1x.png");
   // url("../img/map-pin.png");
   background-position: center;
@@ -88,11 +88,9 @@
   .contacts__map {
     background-image: url("../img/bg-map-tablet@1x.png");
     // url("../img/map-pin.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
   }
 }
+
 
 @media (min-width: @width-desktop) {
   .contacts__info {
@@ -114,8 +112,5 @@
   .contacts__map {
     background-image: url("../img/bg-map-desktop@1x.png");
     // url("../img/map-pin.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
   }
 }

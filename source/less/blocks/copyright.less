@@ -10,11 +10,8 @@
   text-decoration: none;
 
   & span {
-    font-family: @font-second;
-    font-size: 16px;
-    line-height: 16px;
+    .arial(16px, 16px);
     text-align: right;
-    color: @color-footer-link-text;
   }
 
   & svg {
@@ -31,7 +28,7 @@
   }
 
   &:focus {
-    outline: 2px solid @color-outline;
+    .outline;
   }
 
   &:active {

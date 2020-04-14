@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 
+
 .promotion__wrapper {
   margin: 0 auto;
 
@@ -12,38 +13,39 @@
   padding-top: 28px;
 }
 
+
 .promotion__title {
   margin: 0 auto;
   width: 250px;
 
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: normal;
+  .oswald(36px, 36px);
   text-align: center;
-  color: @color-subtitle-third;
+  color: @colot-text-contrast;
 }
+
 
 .promotion__slogan {
   margin-top: 25px;
 
-  font-size: 14px;
-  line-height: 14px;
+  .oswald(14px, 14px);
   text-align: center;
   text-transform: uppercase;
-  color: @color-subtitle-third;
+  color: @colot-text-contrast;
 }
+
 
 .promotion__link {
   padding-top: 12px;
 
-  font-size: 14px;
-  line-height: 16px;
+  .oswald(14px, 16px);
 }
+
 
 .promotion__image {
   margin-top: 15px;
   margin-left: 20px;
 }
+
 
 @media (min-width: @width-tablet) {
   .promotion__link {

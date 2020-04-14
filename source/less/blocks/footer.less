@@ -7,10 +7,12 @@
   background-color: @color-footer-background;
 }
 
+
 .footer__wrapper {
   display: flex;
   flex-direction: column;
 }
+
 
 .footer__logo-link {
   display: flex;
@@ -20,18 +22,19 @@
   height: 95px;
   margin: 2px 20px;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:focus {
-    outline: 2px solid @color-outline;
+  &[href]:focus {
+    .outline;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 }
+
 
 @media (min-width: @width-tablet) {
   .footer__wrapper {
@@ -43,6 +46,7 @@
     height: 150px;
   }
 }
+
 
 @media (min-width: @width-desktop) {
   .footer__wrapper {

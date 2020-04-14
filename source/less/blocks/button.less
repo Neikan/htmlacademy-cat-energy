@@ -1,10 +1,5 @@
 .button {
-  min-width: 280px;
-  height: 40px;
-
-  font-family: @font-main;
-  font-size: 16px;
-  line-height: 20px;
+  .oswald(16px, 20px);
   text-align: center;
   text-transform: uppercase;
   color: @color-button-text;
@@ -17,8 +12,16 @@
     cursor: pointer;
   }
 
+  &:focus {
+    .outline;
+  }
+
   &:active {
     color: rgba(@color-button-text, 0.3);
     cursor: pointer;
+  }
+
+  @media (min-width: @width-tablet) {
+    .oswald(20px, 20px);
   }
 }
