@@ -1,12 +1,13 @@
 .example {
-  display: flex;
-  flex-direction: column;
-
   margin: 0 auto;
   margin-top: 40px;
   padding-top: 20px;
+  background-color: @color-example-background;
+}
 
-  background-color: @color-back-second;
+.example__wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -14,7 +15,6 @@
   margin: 0;
   padding-top: 0;
   padding-left: 20px;
-
   .oswald(36px, 60px);
   text-align: left;
 }
@@ -24,10 +24,13 @@
   margin-top: 23px;
   margin-right: 30px;
   margin-left: 20px;
-
   .arial();
 }
 
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 .example__details {
   display: flex;
@@ -44,22 +47,15 @@
   flex-direction: column;
   width: 130px;
   height: 56px;
-
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 13px;
-
-  border-top: 1px solid @color-example-border;
-  border-right: 1px solid @color-example-border;
-  border-left: 1px solid @color-example-border;
+  border: 1px solid @color-example-border;
   border-radius: 3px;
-
-  background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg'><line x1='0' y1='0' x2='130' y2='0' stroke='gainsboro' stroke-width='2' stroke-dasharray='18 82 18' /></svg>");
-  background-position: 0 -1px;
 }
 
 
-.example__weight {
+.example__param {
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -69,45 +65,28 @@
 }
 
 
-.example__dowmweight {
+.example__down {
   width: 80px;
   margin: 0 auto;
   margin-top: 10px;
-
   .arial(12px, 12px);
   text-align: center;
   text-transform: lowercase;
+  background-color: @color-example-background
 }
 
 
-.example__time {
+.example__resume {
   display: flex;
-  text-align: center;
-  flex-direction: column;
-  margin: 0;
-
-  .oswald(24px, 24px);
-  text-transform: uppercase;
-}
-
-
-.example__downtime {
-  width: 80px;
-  margin: 0 auto;
-  margin-top: 10px;
-
-  .arial(12px, 12px);
-  text-align: center;
-  text-transform: lowercase;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .example__cost {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  margin: 0 2px;
   margin-top: 35px;
-
   .oswald(14px, 20px);
   text-transform: uppercase;
   text-align: center;
@@ -116,4 +95,133 @@
 
 .example__slider {
   padding-top: 30px;
+}
+
+
+@media (min-width: @width-tablet) {
+  .example {
+    background-color: @color-background-contrast;
+  }
+
+
+  .example__title {
+    .oswald(60px, 60px);
+  }
+
+
+  .example__text {
+    .arial(16px, 24px);
+  }
+
+
+  .example__wrapper {
+    margin-top: 56px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .example__details {
+    margin: 0;
+  }
+
+
+  .example__description {
+    margin: 0;
+    margin-right: 72px;
+    width: 162px;
+    height: 72px;
+  }
+
+
+  .example__param {
+    .oswald(30px, 37px);
+  }
+
+
+  .example__down {
+    margin-top: 12px;
+    .arial(14px, 14px);
+    background-color: @color-background-contrast;
+
+    &--weight {
+      width: 110px;
+    }
+
+    &--time {
+      width: 140px;
+    }
+  }
+
+
+  .example__resume {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+
+  .example__cost {
+    margin: 5px 0;
+    .oswald(20px, 20px);
+    text-align: right;
+  }
+
+
+  .example__slider {
+    padding-top: 86px;
+  }
+}
+
+
+@media (min-width: @width-desktop) {
+  .example__title {
+    margin-bottom: 65px;
+  }
+
+  
+  .example__wrap {
+    flex-direction: row;
+    height: 462px;
+    background-color: @color-example-background;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .example__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .example__text {
+    width: 435px;
+  }
+
+
+  .example__wrapper {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+
+  .example__description {
+    margin-right: 42px;
+  }
+
+
+  .example__down {
+    background-color: @color-example-background;
+  }
+
+
+  .example__resume {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 62px;
+  }
 }

@@ -1,55 +1,115 @@
 .promotion {
   display: flex;
   flex-direction: column;
-}
-
-
-.promotion__wrapper {
-  margin: 0 auto;
-
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  //background-color: @color-background-third;
-  padding-top: 28px;
+  align-items: center;
+  padding-right: 0;
+  padding-left: 0;
+  background: url("../img/index-background-mobile@1x.jpg") center top no-repeat, linear-gradient(180deg,  #65a93c 65%, @color-background-contrast 35%);
 }
 
 
 .promotion__title {
-  margin: 0 auto;
+  margin-top: 28px;
+  margin-bottom: 20px;
   width: 250px;
-
   .oswald(36px, 36px);
-  text-align: center;
   color: @colot-text-contrast;
+  text-align: center;
 }
 
 
 .promotion__slogan {
-  margin-top: 25px;
-
+  margin-top: 5px;
+  margin-bottom: 29px;
   .oswald(14px, 14px);
-  text-align: center;
-  text-transform: uppercase;
   color: @colot-text-contrast;
-}
-
-
-.promotion__link {
-  padding-top: 12px;
-
-  .oswald(14px, 16px);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 
 .promotion__image {
-  margin-top: 15px;
+  margin: 0 auto;
+}
+
+
+.promotion__link {
+  margin-right: 20px;
+  margin-bottom: 20px;
   margin-left: 20px;
+  padding-bottom: 20px;
+  width: 88%;
 }
 
 
 @media (min-width: @width-tablet) {
+  .promotion {
+    position: relative;
+    align-items: flex-start;
+    padding-bottom: 508px;
+    padding-left: 117px;
+    background: none;
+  }
+
+
+  .promotion__title {
+    width: 415px;
+    margin-bottom: 36px;
+    .oswald(60px, 60px);
+    color: @color-header-text;
+    text-align: left;
+  }
+
+
+  .promotion__slogan {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 48px;
+    padding: 0;
+    .oswald(20px, 20px);
+    color: @color-header-text;
+    text-align: left;
+  }
+
+
+  .promotion__image {
+    position: absolute;
+    z-index: -1;
+    top: 230px;
+    left: calc(50% - 356px);
+    width: 709px;
+    height: 609px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  
   .promotion__link {
-    width: 245px;
-    height: 52px;
+    align-self: flex-start;
+    width: 246px;
+    min-height: 52px;
+    .oswald(20px, 20px);
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .promotion {
+    padding-top: 50px;
+    padding-bottom: 187px;
+    padding-left: 81px;
+  }
+
+
+  .promotion__link {
+    margin-top: 53px;
+  }
+
+
+  .promotion__image {
+    z-index: 1;
+    width: 552px;
+    height: 499px;
+    top: -3px;
+    left: calc(50% - 159px);
   }
 }

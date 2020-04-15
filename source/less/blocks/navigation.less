@@ -6,10 +6,8 @@
 
 .navigation__list {
   .list-reset;
-
   padding: 0;
   margin: 0;
-
   text-align: center;
 }
 
@@ -31,11 +29,9 @@
 
 .navigation__link {
   .link-reset;
-
   display: block;
   padding-top: 23px;
   padding-bottom: 22px;
-
   .oswald(20px, 20px, @font-weight-bold);
   color: @color-nav-link-text;
 
@@ -62,7 +58,6 @@
   display: block;
   width: 65px;
   height: 63px;
-
   background-color: transparent;
   border: none;
 
@@ -142,9 +137,7 @@
 
   .navigation__link {
     padding: 6px 0;
-
     .oswald(18px, 25px);
-
     border: none;
 
     &--active {
@@ -173,13 +166,28 @@
   .navigation__item {
     margin-right: 34px;
   }
-  
+
 
   .navigation__link {
     .oswald(20px, 25px);
+    color: @colot-text-contrast;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: rgba(@colot-text-contrast, 0.6);
+    }
+
+    &[href]:focus {
+      .outline;
+    }
+
+    &[href]:active {
+      color: rgba(@colot-text-contrast, 0.3);
+      outline: none;
+    }
 
     &--active::after {
-      background-color: @color-nav-link-active;
+      background-color: @colot-text-contrast;
     }
   }
 }
