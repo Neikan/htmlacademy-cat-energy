@@ -1,0 +1,26 @@
+.button {
+  .oswald(16px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-button-text;
+  background-color: @color-button-background;
+  border: none;
+
+  &:hover {
+    background-color: @color-button-background-hover;
+    cursor: pointer;
+  }
+
+  &:focus {
+    .outline;
+  }
+
+  &:active {
+    color: rgba(@color-button-text, 0.3);
+    cursor: pointer;
+  }
+
+  @media (min-width: @width-tablet) {
+    .oswald(20px, 20px);
+  }
+}

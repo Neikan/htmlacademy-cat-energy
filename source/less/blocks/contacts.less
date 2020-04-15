@@ -1,0 +1,108 @@
+.contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  padding-top: 29px;
+  padding-bottom: 26px;
+}
+
+
+.contacts__description {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  .oswald(16px, 20px);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 140px;
+  .arial(14px, 20px);
+  text-align: left;
+}
+
+
+.contacts__street,
+.contacts__city {
+  margin: 0;
+}
+
+
+.contacts__map {
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  width: 100%;
+  // добавить пин
+  background-image: url("../img/bg-map-mobile@1x.png");
+  // url("../img/map-pin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+
+@media (min-width: @width-tablet) {
+  .contacts__info {
+    padding-top: 69px;
+    padding-right: 72px;
+    padding-left: 72px;
+    padding-bottom: 62px;
+  }
+
+  .contacts__description {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    width: 155px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .contacts__street {
+    margin-bottom: 20px;
+  }
+
+  .contacts__map {
+    background-image: url("../img/bg-map-tablet@1x.png");
+    // url("../img/map-pin.png");
+  }
+}
+
+
+@media (min-width: @width-desktop) {
+  .contacts__info {
+    position: absolute;
+    z-index: 5;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    background-color: @color-social-background-desktop;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__map {
+    background-image: url("../img/bg-map-desktop@1x.png");
+    // url("../img/map-pin.png");
+  }
+}

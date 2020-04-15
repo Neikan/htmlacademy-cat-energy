@@ -1,0 +1,166 @@
+.about-program {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+
+.about-program__title {
+  margin: 0;
+  padding-top: 0;
+  padding-left: 20px;
+  .oswald(36px, 60px);
+  text-align: left;
+}
+
+
+.about-program__list {
+  .list-reset;
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+
+.about-program__item {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.about-program__text {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  padding-left: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 3px;
+  .arial();
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: @color-background;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--nutrients::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--cooking-method::before {
+    background-image: url("../img/advantage-powder@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--meals::before {
+    background-image: url("../img/advantage-dining@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--changes::before {
+    background-image: url("../img/advantage-clock@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media (min-width: @width-tablet) {
+  .about-program {
+    border-bottom: 1px solid @color-program-background;
+  }
+
+
+  .about-program__title {
+    .oswald(60px, 60px);
+    margin-bottom: 0;
+    margin-top: 51px;
+  }
+
+
+  .about-program__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 54px;
+    margin-top: -19px;
+  }
+
+
+  .about-program__item {
+    position: relative;
+    flex-basis: 246px;
+    flex-shrink: 0;
+    margin-top: 89px;
+    margin-right: 79px;
+    padding-bottom: 50px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .about-program__text {
+    padding-top: 112px;
+    padding-left: 0;
+    .arial(16px, 24px);
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: -37px;
+      left: 126px;
+      display: inline-block;
+      width: 121px;
+      height: 230px;
+
+      .oswald(281px, 281px);
+      color: @color-program-background;
+    }
+
+    &--nutrients::after {
+      content: "1";
+    }
+
+    &--cooking-method::after {
+      content: "2";
+    }
+
+    &--meals::after {
+      content: "3";
+    }
+
+    &--changes::after {
+      content: "4";
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .about-program {
+    border-bottom: none;
+  }
+
+
+  .about-program__item {
+    flex-basis: 246px;
+    margin-right: 0;
+    padding-bottom: 40px;
+  }
+}

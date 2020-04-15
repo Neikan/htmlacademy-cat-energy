@@ -1,0 +1,503 @@
+.form-feedback {
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.form-feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-feedback__cat-parameters,
+.form-feedback__program-selection {
+  border: none;
+}
+
+
+.form-feedback__contacts {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-top: 3px solid @color-element-border;
+}
+
+
+.form-feedback__comment {
+  display: flex;
+  border: none;
+  border-top: 3px solid @color-element-border;
+}
+
+
+.form-feedback__additional-info {
+  border: none;
+  border-top: 3px solid @color-element-border;
+}
+
+
+.form-feedback__wrap {
+  .list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.form-feedback__legend {
+  .oswald(24px, 24px);
+  text-align: left;
+}
+
+
+.form-feedback__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+
+  &--cat-parameters {
+    justify-content: space-between;
+  }
+}
+
+
+.form-feedback__control {
+  height: 45px;
+  border: 1px solid @color-input-border;
+
+  .oswald(16px, 18px);
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-input-text;
+
+  &:hover {
+    border-color: @color-input-border-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border-width: 2px;
+    border-color: @color-input-border-active;
+  }
+
+  &:focus + .form-feedback__icon {
+    fill: @color-background;
+  }
+
+  &::placeholder {
+    margin-top: 15px;
+    margin-bottom: 16px;
+  }
+
+  &--input {
+    flex-grow: 1;
+    padding-left: 16px;
+  }
+
+  &--textarea {
+    width: 100%;
+    height: 150px;
+    padding-left: 15px;
+    padding-top: 13px;
+    margin: 0;
+    border: 1px solid @color-input-border;
+    outline: none;
+    resize: none;
+  }
+}
+
+
+.form-feedback__icon {
+  position: absolute;
+  fill: @color-icon-fill;
+
+  &--email {
+    top: 15px;
+    right: 18px;
+
+    width: 18px;
+    height: 14px;
+  }
+
+  &--phone {
+    top: 12px;
+    right: 15px;
+
+    width: 21px;
+    height: 21px;
+  }
+}
+
+
+.form-feedback__label {
+  margin-right: 16px;
+
+  .oswald(16px, 18px);
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-label-text;
+}
+
+
+.form-feedback__label--radio {
+  display: inline-block;
+  position: relative;
+  height: 42px;
+  padding-left: 46px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(@color-label-text, 0.3);
+  }
+
+  &::before {
+    position: absolute;
+    top: -6px;
+    left: 1px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid @color-border-check;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &:hover::before {
+    border-color: @color-border-check-hover;
+    cursor: pointer;
+  }
+
+  &:active::before {
+    border-color: rgba(@color-border-check-hover, 0.3);
+  }
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    content: "";
+    background-color: @color-check-active;
+  }
+
+  &:active::after {
+    background-color: rgba(@color-check-active, 0.3);
+  }
+}
+
+
+.form-feedback__input--radio {
+  &:checked + .form-feedback__label--radio::after {
+    display: inline-block;
+  }
+
+  &:disabled + .form-feedback__label--radio::before,
+  &:disabled + .form-feedback__label--radio::after {
+    opacity: 0.3;
+  }
+
+  &:disabled + .form-feedback__label--radio::before {
+    border-color: @color-input-border;
+    cursor: pointer;
+  }
+
+  &:focus + .form-feedback__label--radio::before {
+    border-color: @color-input-border-active;
+  }
+}
+
+
+// Чек-бокс
+.form-feedback__label--checkbox {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 46px;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(@color-label-text, 0.3);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid @color-border-check;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    display: none;
+    width: 7px;
+    height: 16px;
+    margin: -3px 10px 3px;
+    border: solid @color-check-active;
+    border-width: 0 1px 2px 0;
+    transform: rotate(45deg);
+    content: "";
+  }
+
+  &:hover::before {
+    border-color: @color-border-check-hover;
+    cursor: pointer;
+  }
+
+  &:active::before {
+    border-color: rgba(@color-border-check-hover, 0.3);
+  }
+
+  &:active::after {
+    border-color: rgba(@color-check-active, 0.3);
+  }
+}
+
+
+.form-feedback__input--checkbox {
+  &:checked + .form-feedback__label--checkbox::after {
+    display: inline-block;
+  }
+
+  &:disabled + .form-feedback__label--checkbox::after,
+  &:disabled + .form-feedback__label--checkbox::before {
+    opacity: 0.3;
+  }
+
+  &:disabled + .form-feedback__label--checkbox:hover::before {
+    cursor: default;
+  }
+
+  &:focus + .form-feedback__label--checkbox::before {
+    border-color: @color-input-border-active;
+  }
+}
+
+
+.form-feedback__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-feedback__button {
+  width: 100%;
+  height: 40px;
+}
+
+
+.form-feedback__footnote {
+  .arial(14px, 16px);
+  text-align: center;
+}
+
+
+@media (min-width: @width-tablet) {
+  .form-feedback__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 200px;
+    padding: 0;
+
+    &--info {
+      flex-direction: row;
+    }
+
+    &--contacts {
+      justify-content: space-around;
+    }
+  }
+
+
+  .form-feedback__program-selection {
+    padding-bottom: 0;
+    padding-top: 10px;
+    padding-left: 38px;
+    border: 1px solid @color-input-border;
+  }
+
+
+  .form-feedback__field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    &--info {
+      width: 50%;
+    }
+  }
+
+
+  .form-feedback__legend {
+    .oswald(36px, 36px);
+  }
+
+
+  .form-feedback__label {
+    .oswald(20px, 20px);
+  }
+
+
+  .form-feedback__control {
+    .oswald(20px, 20px);
+
+    &--input {
+      margin: 0;
+      height: 52px;
+    }
+
+    &--textarea {
+      width: 100%;
+    }
+  }
+
+
+  .form-feedback__icon {
+    &--email {
+      top: 19px;
+      right: 18px;
+    }
+
+    &--phone {
+      top: 16px;
+      right: 15px;
+    }
+  }
+
+
+  .form-feedback__label--radio {
+    &::before {
+      top: -9px;
+      left: -15px;
+      width: 38px;
+      height: 38px;
+    }
+
+    &::after {
+      top: 2px;
+      left: -4px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+
+  .form-feedback__label--checkbox {
+    &::before {
+      top: -8px;
+      left: 0;
+      width: 38px;
+      height: 38px;
+    }
+
+    &::after {
+      top: 0;
+      left: 2px;
+      width: 14px;
+      height: 21px;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+
+  .form-feedback__footer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  .form-feedback__footnote {
+    width: 50%;
+  }
+
+
+  .form-feedback__button {
+    width: 283px;
+    height: 52px;
+  }
+}
+
+
+@media (min-width: @width-desktop) {
+  .form-feedback__wrapper {
+    flex-direction: row;
+  }
+
+
+  .form-feedback__cat-parameters {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 80px;
+  }
+
+
+  .form-feedback__cat-contacts {
+    margin-right: 80px;
+    width: 1220px;
+  }
+
+
+  .form-feedback__wrap {
+    &--contacts {
+      flex-direction: row;
+      width: 1220px;
+    }
+  }
+
+
+  .form-feedback__icon {
+    &--email {
+      top: 18px;
+      right: 18px;
+    }
+
+    &--phone {
+      top: 14px;
+      right: 15px;
+    }
+  }
+
+
+  .form-feedback__field {
+    display: flex;
+    align-items: center;
+    width: 570px;
+    padding: 0;
+    margin: 0;
+
+    &--info {
+      width: 25%;
+    }
+  }
+
+
+  .form-feedback__button {
+    width: 568px;
+  }
+}
