@@ -68,14 +68,13 @@
   display: flex;
   width: 84px;
   height: 14px;
-
   border: 1px solid @color-example-border;
   border-radius: 5px;
   background-color: @color-example-background-slider;
   cursor: pointer;
   outline: none;
 
-  &:after {
+  &::after {
     position: absolute;
     z-index: 1;
     top: 3px;
@@ -101,7 +100,6 @@
 
   .slider__pictures {
     display: flex;
-
   }
 
 
@@ -117,12 +115,7 @@
   }
 
 
-  .slider__text {
-    .oswald(20px, 20px);
-  }
-
-
-  .slider__range  {
+  .slider__range {
     height: 7px;
     width: 428px;
     background-color: @color-example-border;
@@ -142,10 +135,9 @@
     margin: -14px auto 0;
     background-color: @color-example-background-slider;
     border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(@color-element-shadow, 0.15);
 
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);;
-
-    &:after {
+    &::after {
       top: 11px;
       left: 11px;
       min-width: 8px;
@@ -155,12 +147,13 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);;
+      box-shadow: 0 3px 5px 0 rgba(@color-element-shadow, 0.25);
     }
 
     &:active {
-      box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.30);
+      box-shadow: 0 4px 5px 0 rgba(@color-element-shadow, 0.3);
       border: solid 2px @color-background;
+
       &::after {
         transform: translate(-7%);
       }
