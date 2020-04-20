@@ -1,79 +1,174 @@
-.form-feedback {
-  margin: 0 auto;
-  padding: 0;
-}
-
+// .form-feedback__fieldset {
+//   .container;
+//   padding: 0;
+// }
 
 .form-feedback__wrapper {
-  display: flex;
-  flex-direction: column;
+  padding-top: 3px 0;
 }
 
 
-.form-feedback__cat-parameters,
-.form-feedback__program-selection {
-  border: none;
-}
-
-
-.form-feedback__contacts {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  border-top: 3px solid @color-element-border;
-}
-
-
-.form-feedback__comment {
-  display: flex;
-  border: none;
-  border-top: 3px solid @color-element-border;
-}
-
-
-.form-feedback__additional-info {
-  border: none;
-  border-top: 3px solid @color-element-border;
-}
-
-
-.form-feedback__wrap {
-  .list-reset;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.form-feedback__legend {
-  .oswald(24px, 24px);
-  text-align: left;
-}
-
-
-.form-feedback__field {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0;
+.form-feedback__fieldset {
   margin: 0;
-  margin-bottom: 16px;
+  padding: 0;
+  border: none;
 
   &--cat-parameters {
-    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  &--programs {
+    margin-top: 22px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-top: 26px;
+    padding-bottom: 15px;
+    border: 1px solid @color-input-border;
+  }
+
+  &--contacts,
+  &--comment,
+  &--info {
+    border-top: 3px solid @color-element-border;
+  }
+
+  &--contacts {
+    margin-top: 13px;
+  }
+
+  &--comment {
+    margin-top: 13px;
+  }
+
+  &--info {
+    margin-top: 27px;
   }
 }
 
 
+.form-feedback__legend {
+  padding: 0;
+  padding-left: 19px;
+  .oswald(24px, 24px);
+  text-align: left;
+
+  &--contacts {
+    width: 221px;
+    padding-top: 15px;
+    padding-right: 20px;
+  }
+
+  &--comment,
+  &--info {
+    padding-right: 24px;
+    padding-bottom: 4px;
+  }
+}
+
+
+.form-feedback__list {
+  .list-reset;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 19px;
+  padding-right: 20px;
+
+
+  &--contacts {
+    padding-top: 34px;
+  }
+
+  &--info {
+    margin-top: 16px;
+    padding-top: 15px;
+  }
+}
+
+
+.form-feedback__item {
+  display: flex;
+  align-items: center;
+
+  &--cat-parameters:not(:last-of-type),
+  &--programs:not(:last-of-type),
+  &--info:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  &--contacts {
+    position: relative;
+    margin-bottom: 15px
+  }
+}
+
+
+.form-feedback__fieldset {
+  &--info .form-feedback__item {
+    margin-bottom: 12px;
+  }
+}
+
+
+.form-feedback__label {
+  .oswald(16px, 18px);
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-input-label;
+
+  &--name {
+    margin-right: 16px;
+  }
+
+  &--weight {
+    margin-right: 18px;
+  }
+
+  &--age {
+    margin-right: 4px;
+  }
+
+  &--email {
+    margin-right: 14px;
+  }
+
+  &--phone {
+    margin-right: 12px;
+  }
+}
+
+
+.form-feedback__wrapper-comment {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 32px;
+}
+
+
 .form-feedback__control {
+  flex-grow: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 13px;
   height: 45px;
   border: 1px solid @color-input-border;
-
   .oswald(16px, 18px);
   text-align: left;
   text-transform: uppercase;
   color: @color-input-text;
+
+  &--textarea {
+    flex-basis: 280px;
+    flex-shrink: 1;
+    height: 150px;
+    margin: 0;
+    padding-top: 12px;
+    padding-left: 13px;
+    border: 1px solid @color-input-border;
+    outline: none;
+    resize: none;
+  }
 
   &:hover {
     border-color: @color-input-border-hover;
@@ -90,24 +185,7 @@
   }
 
   &::placeholder {
-    margin-top: 15px;
-    margin-bottom: 16px;
-  }
-
-  &--input {
-    flex-grow: 1;
-    padding-left: 16px;
-  }
-
-  &--textarea {
-    width: 100%;
-    height: 150px;
-    padding-left: 15px;
-    padding-top: 13px;
-    margin: 0;
-    border: 1px solid @color-input-border;
-    outline: none;
-    resize: none;
+    opacity: 1;
   }
 }
 
@@ -117,8 +195,8 @@
   fill: @color-input-icon;
 
   &--email {
-    top: 15px;
-    right: 18px;
+    top: 16px;
+    right: 14px;
 
     width: 18px;
     height: 14px;
@@ -126,7 +204,7 @@
 
   &--phone {
     top: 12px;
-    right: 15px;
+    right: 11px;
 
     width: 21px;
     height: 21px;
@@ -134,21 +212,11 @@
 }
 
 
-.form-feedback__label {
-  margin-right: 16px;
-
-  .oswald(16px, 18px);
-  text-align: left;
-  text-transform: uppercase;
-  color: @color-input-label;
-}
-
-
 .form-feedback__label--radio {
   display: inline-block;
   position: relative;
-  height: 42px;
-  padding-left: 46px;
+  padding-left: 45px;
+  padding-bottom: 10px;
 
   &:hover {
     cursor: pointer;
@@ -161,7 +229,7 @@
   &::before {
     position: absolute;
     top: -6px;
-    left: 1px;
+    left: 0;
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -182,7 +250,7 @@
   &::after {
     position: absolute;
     top: 3px;
-    left: 10px;
+    left: 9px;
     display: none;
     width: 12px;
     height: 12px;
@@ -218,13 +286,12 @@
 }
 
 
-// Чек-бокс
 .form-feedback__label--checkbox {
   display: inline-block;
   position: relative;
   height: 30px;
   line-height: 30px;
-  padding-left: 46px;
+  padding-left: 48px;
   text-transform: uppercase;
 
   &:hover {
@@ -238,7 +305,7 @@
   &::before {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2px;
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -249,7 +316,7 @@
   &::after {
     position: absolute;
     top: 7px;
-    left: 2px;
+    left: 4px;
     display: none;
     width: 7px;
     height: 16px;
@@ -296,111 +363,191 @@
 
 
 .form-feedback__footer {
+  .container;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 22px;
+  margin-bottom: 16px;
 }
 
 
 .form-feedback__button {
-  width: 100%;
+  .oswald(16px, 20px);
   height: 40px;
+  border: none;
 }
 
 
 .form-feedback__footnote {
+  margin-top: 23px;
   .arial(14px, 16px);
   text-align: center;
 }
 
 
 @media (min-width: @width-tablet) {
-  .form-feedback__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 200px;
-    padding: 0;
+  .form-feedback__fieldset {
+    padding-left: 30px;
+    padding-right: 30px;
 
-    &--info {
-      flex-direction: row;
+    &--cat-parameters {
+      margin-top: 66px;
+    }
+
+    &--programs {
+      margin-top: 72px;
+      margin-right: 67px;
+      margin-left: 71px;
+      padding-top: 34px;
+      padding-left: 14px;
+      padding-bottom: 23px;
     }
 
     &--contacts {
-      justify-content: space-around;
+      margin-top: 58px;
     }
-  }
 
-
-  .form-feedback__program-selection {
-    padding-bottom: 0;
-    padding-top: 10px;
-    padding-left: 38px;
-    border: 1px solid @color-input-border;
-  }
-
-
-  .form-feedback__field {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    &--comment {
+      margin-top: 44px;
+    }
 
     &--info {
-      width: 50%;
+      margin-top: 65px;
     }
   }
 
 
   .form-feedback__legend {
+    padding-left: 38px;
+    padding-right: 44px;
     .oswald(36px, 36px);
+
+    &--contacts {
+      width: 590px;
+      padding-bottom: 25px;
+      padding-right: 0;
+    }
+
+    &--comment,
+    &--info {
+      padding-bottom: 15px;
+    }
+  }
+
+
+  .form-feedback__list {
+    padding-left: 40px;
+    padding-right: 37px;
+
+    &--programs {
+      padding-left: 27px;
+    }
+
+    &--contacts {
+      margin-top: 17px;
+    }
+
+    &--info {
+      margin-top: 37px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+
+  .form-feedback__item {
+    &--cat-parameters:not(:last-of-type),
+    &--programs:not(:last-of-type),
+    &--info:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    &--info {
+      flex-basis: 288px;
+    }
+
+    &--contacts {
+      margin-bottom: 20px;
+    }
   }
 
 
   .form-feedback__label {
     .oswald(20px, 20px);
+
+    &--name {
+      margin-right: 18px;
+    }
+
+    &--weight {
+      margin-right: 21px;
+    }
+
+    &--age {
+      margin-right: 11px;
+    }
+
+    &--email {
+      margin-right: 20px;
+    }
+
+    &--phone {
+      margin-right: 15px;
+    }
+  }
+
+
+  .form-feedback__wrapper-comment {
+    margin-top: 62px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
 
   .form-feedback__control {
+    padding-left: 17px;
+    padding-right: 17px;
     .oswald(20px, 20px);
 
     &--input {
-      margin: 0;
       height: 52px;
     }
 
     &--textarea {
-      width: 100%;
+      height: 174px;
+      padding-top: 15px;
     }
   }
 
 
   .form-feedback__icon {
     &--email {
-      top: 19px;
+      top: 20px;
       right: 18px;
     }
 
     &--phone {
-      top: 16px;
+      top: 17px;
       right: 15px;
     }
   }
 
 
   .form-feedback__label--radio {
+    padding-left: 45px;
+    padding-bottom: 13px;
+
     &::before {
       top: -9px;
-      left: -15px;
+      left: -14px;
       width: 38px;
       height: 38px;
     }
 
     &::after {
       top: 2px;
-      left: -4px;
+      left: -3px;
       width: 18px;
       height: 18px;
     }
@@ -408,8 +555,11 @@
 
 
   .form-feedback__label--checkbox {
+    padding-left: 58px;
+    padding-bottom: 50px;
+
     &::before {
-      top: -8px;
+      top: -9px;
       left: 0;
       width: 38px;
       height: 38px;
@@ -427,77 +577,133 @@
 
   .form-feedback__footer {
     flex-direction: row;
-    align-items: center;
-  }
-
-
-  .form-feedback__footnote {
-    width: 50%;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-bottom: 76px;
   }
 
 
   .form-feedback__button {
-    width: 283px;
+    flex-basis: 283px;
+    flex-shrink: 0;
     height: 52px;
+    margin-left: 40px;
+    margin-right: 63px;
+    .oswald(20px, 20px);
+  }
+
+
+  .form-feedback__footnote {
+    margin-top: 16px;
+    .arial(16px, 16px);
   }
 }
 
 
 @media (min-width: @width-desktop) {
   .form-feedback__wrapper {
-    flex-direction: row;
-  }
-
-
-  .form-feedback__cat-parameters {
-    padding: 0;
     display: flex;
     justify-content: space-between;
-    margin-right: 80px;
+    align-items: flex-start;
+    margin-top: 66px;
+    margin-left: 40px;
+    margin-right: 110px;
   }
 
 
-  .form-feedback__cat-contacts {
-    margin-right: 80px;
-    width: 1220px;
-  }
+  .form-feedback__fieldset {
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 0;
+    padding-right: 0;
 
+    &--cat-parameters {
+      flex-basis: 570px;
+      flex-shrink: 0;
+      margin-top: 0;
+      margin-right: 40px;
+    }
 
-  .form-feedback__wrap {
+    &--programs {
+      flex-basis: 570px;
+      flex-shrink: 0;
+      margin: 0;
+      margin-left: 40px;
+    }
+
     &--contacts {
-      flex-direction: row;
-      width: 1220px;
+      margin-top: 38px;
+    }
+
+    &--comment {
+      margin-top: 67px;
     }
   }
 
+
+  .form-feedback__list {
+    &--cat-parameters {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &--programs {
+      padding-left: 40px;
+    }
+
+    &--contacts {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .form-feedback__item {
+    &--cat-parameters {
+      margin-bottom: 16px;
+    }
+
+    &--contacts {
+      flex-basis: 570px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &--info {
+      flex-basis: 249px;
+      margin-bottom: 0;
+    }
+  }
 
   .form-feedback__icon {
     &--email {
       top: 18px;
-      right: 18px;
     }
 
     &--phone {
-      top: 14px;
-      right: 15px;
+      top: 18px;
     }
   }
 
 
-  .form-feedback__field {
-    display: flex;
-    align-items: center;
-    width: 570px;
-    padding: 0;
-    margin: 0;
-
-    &--info {
-      width: 25%;
-    }
+  .form-feedback__footer {
+    margin-top: 25px;
+    margin-bottom: 85px;
   }
 
 
   .form-feedback__button {
-    width: 568px;
+    flex-basis: 568px;
+    margin-left: 0;
+    margin-right: 84px;
+  }
+
+
+  .form-feedback__footnote {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -166,24 +166,32 @@
 
   .navigation__link {
     .oswald(20px, 25px);
-    color: @color-text-contrast;
 
-    &[href]:hover,
-    &[href]:focus {
+    &--index {
+      position: relative;
+      color: @color-text-contrast;
+    }
+
+    &--index-active {
+      &::after {
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 2px;
+        bottom: -3px;
+        content: "";
+        background-color: @color-text-contrast;
+      }
+    }
+
+    &--index[href]:hover,
+    &--index[href]:focus {
       color: rgba(@color-text-contrast, 0.6);
     }
 
-    &[href]:focus {
-      .outline;
-    }
-
-    &[href]:active {
+    &--index[href]:active {
       color: rgba(@color-text-contrast, 0.3);
       outline: none;
-    }
-
-    &--active::after {
-      background-color: @color-text-contrast;
     }
   }
 }

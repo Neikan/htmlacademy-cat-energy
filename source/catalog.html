@@ -10,7 +10,7 @@
 
   <body>
 
-    <header class="header">
+    <header class="header header__not-index">
       <!-- Блок 1.1. Лого и навигация -->
       <div class="header__wrapper">
         <a class="header__logo-link" href="index.html">
@@ -27,7 +27,7 @@
               <a class="navigation__link" href="index.html" aria-label="Главная" title="Главная">Главная</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--active">Каталог продукции</a>
+              <a class="navigation__link navigation__link--active navigation__link--not-index">Каталог продукции</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="form.html" aria-label="Подбор программы" title="Подбор программы">Подбор программы</a>
@@ -408,5 +408,6 @@
       </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/picturefill.min.js" async=""></script>
   </body>
 </html>
