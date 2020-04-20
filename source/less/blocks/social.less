@@ -1,15 +1,12 @@
 .social {
   padding-left: 0;
-  margin: 0 20px;
 }
 
 
 .social__list {
   .list-reset;
-
   display: flex;
   justify-content: center;
-
   border-top: 1px solid @color-footer-border;
   border-bottom: 1px solid @color-footer-border;
 }
@@ -19,9 +16,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
+  margin: 3px 0;
 
   & svg {
     fill: @color-footer-svg-default;
@@ -59,6 +56,7 @@
 
 @media (min-width: @width-tablet) {
   .social__list {
+    margin-left: 35px;
     border: none;
   }
 
@@ -80,8 +78,13 @@
     }
 
     &--facebook {
-      padding-right: 15px;
-      padding-bottom: 4px;
+      padding-right: 17px;
     }
   }
 }
+
+// @media (min-width: @width-desktop) {
+//   .social {
+//     padding-bootom: 5px;
+//   }
+// }

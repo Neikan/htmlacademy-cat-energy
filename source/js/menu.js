@@ -1,23 +1,23 @@
 'use strict';
 
-const Classes = {
+const ClassMarkup = {
   NO_JS: 'navigation--no-js',
   OPENED: 'navigation--opened',
   CLOSED: 'navigation--closed'
 }
 
-const navigation = document.querySelector(".navigation");
-const toggle = document.querySelector(".navigation__toggle");
+const navigation = document.querySelector('.navigation');
+const toggle = document.querySelector('.navigation__toggle');
 
-navigation.classList.remove(Classes.NO_JS);
+navigation.classList.remove(ClassMarkup.NO_JS);
 
 const toggleClickHandler = () => {
-  if (navigation.classList.contains(Classes.CLOSED)) {
-    navigation.classList.remove(Classes.CLOSED);
-    navigation.classList.add(Classes.OPENED);
+  if (navigation.classList.contains(ClassMarkup.CLOSED)) {
+    navigation.classList.remove(ClassMarkup.CLOSED);
+    navigation.classList.add(ClassMarkup.OPENED);
   } else {
-    navigation.classList.add(Classes.CLOSED);
-    navigation.classList.remove(Classes.OPENED);
+    navigation.classList.add(ClassMarkup.CLOSED);
+    navigation.classList.remove(ClassMarkup.OPENED);
   }
 };
 

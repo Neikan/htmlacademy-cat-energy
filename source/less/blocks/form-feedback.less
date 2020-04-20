@@ -114,7 +114,7 @@
 
 .form-feedback__icon {
   position: absolute;
-  fill: @color-icon-fill;
+  fill: @color-input-icon;
 
   &--email {
     top: 15px;
@@ -140,7 +140,7 @@
   .oswald(16px, 18px);
   text-align: left;
   text-transform: uppercase;
-  color: @color-label-text;
+  color: @color-input-label;
 }
 
 
@@ -155,7 +155,7 @@
   }
 
   &:active {
-    color: rgba(@color-label-text, 0.3);
+    color: rgba(@color-input-label, 0.3);
   }
 
   &::before {
@@ -165,18 +165,18 @@
     display: inline-block;
     width: 28px;
     height: 28px;
-    border: 1px solid @color-border-check;
+    border: 1px solid @color-input-border-check;
     border-radius: 50%;
     content: "";
   }
 
   &:hover::before {
-    border-color: @color-border-check-hover;
+    border-color: @color-input-border-check-hover;
     cursor: pointer;
   }
 
   &:active::before {
-    border-color: rgba(@color-border-check-hover, 0.3);
+    border-color: rgba(@color-input-border-check-hover, 0.3);
   }
 
   &::after {
@@ -188,11 +188,11 @@
     height: 12px;
     border-radius: 50%;
     content: "";
-    background-color: @color-check-active;
+    background-color: @color-input-check;
   }
 
   &:active::after {
-    background-color: rgba(@color-check-active, 0.3);
+    background-color: rgba(@color-input-check, 0.3);
   }
 }
 
@@ -232,7 +232,7 @@
   }
 
   &:active {
-    color: rgba(@color-label-text, 0.3);
+    color: rgba(@color-input-label, 0.3);
   }
 
   &::before {
@@ -242,7 +242,7 @@
     display: inline-block;
     width: 28px;
     height: 28px;
-    border: 1px solid @color-border-check;
+    border: 1px solid @color-input-border-check;
     content: "";
   }
 
@@ -254,23 +254,23 @@
     width: 7px;
     height: 16px;
     margin: -3px 10px 3px;
-    border: solid @color-check-active;
+    border: solid @color-input-check;
     border-width: 0 1px 2px 0;
     transform: rotate(45deg);
     content: "";
   }
 
   &:hover::before {
-    border-color: @color-border-check-hover;
+    border-color: @color-input-border-check-hover;
     cursor: pointer;
   }
 
   &:active::before {
-    border-color: rgba(@color-border-check-hover, 0.3);
+    border-color: rgba(@color-input-border-check-hover, 0.3);
   }
 
   &:active::after {
-    border-color: rgba(@color-check-active, 0.3);
+    border-color: rgba(@color-input-check, 0.3);
   }
 }
 

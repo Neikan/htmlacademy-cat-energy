@@ -1,14 +1,13 @@
 .about-program {
+  .container;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 }
 
 
 .about-program__title {
-  margin: 0;
-  padding-top: 0;
-  padding-left: 20px;
+  margin-top: 14px;
+  margin-bottom: 30px;
   .oswald(36px, 60px);
   text-align: left;
 }
@@ -16,15 +15,16 @@
 
 .about-program__list {
   .list-reset;
-  margin-top: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 
 
 .about-program__item {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -32,10 +32,10 @@
   display: inline-block;
   position: relative;
   height: 60px;
-  padding-left: 80px;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 3px;
+  padding-left: 80px;
   .arial();
 
   &::before {
@@ -82,9 +82,9 @@
 
 
   .about-program__title {
-    .oswald(60px, 60px);
+    margin-top: 46px;
     margin-bottom: 0;
-    margin-top: 51px;
+    .oswald(60px, 60px);
   }
 
 
@@ -93,7 +93,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 54px;
-    margin-top: -19px;
+    margin-top: -17px;
   }
 
 
@@ -124,8 +124,8 @@
     &::after {
       position: absolute;
       z-index: -1;
-      top: -37px;
-      left: 126px;
+      top: -39px;
+      left: 114px;
       display: inline-block;
       width: 121px;
       height: 230px;
@@ -158,8 +158,13 @@
   }
 
 
+  .about-program__title {
+    margin-top: 75px;
+    margin-bottom: 0;
+  }
+
+
   .about-program__item {
-    flex-basis: 246px;
     margin-right: 0;
     padding-bottom: 40px;
   }
