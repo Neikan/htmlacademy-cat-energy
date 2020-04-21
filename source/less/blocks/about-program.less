@@ -94,6 +94,7 @@
     justify-content: space-between;
     padding-bottom: 54px;
     margin-top: -17px;
+    counter-reset: programCounter;
   }
 
 
@@ -111,6 +112,19 @@
   }
 
 
+  .about-program__item::before {
+    position: absolute;
+    top: -39px;
+    left: 114px;
+    width: 121px;
+    height: 230px;
+    counter-increment: programCounter;
+    content: counter(programCounter);
+    .oswald(281px, 281px);
+    color: @color-program-background;
+  }
+
+
   .about-program__text {
     padding-top: 112px;
     padding-left: 0;
@@ -119,35 +133,6 @@
     &::before {
       width: 80px;
       height: 80px;
-    }
-
-    &::after {
-      position: absolute;
-      z-index: -1;
-      top: -39px;
-      left: 114px;
-      display: inline-block;
-      width: 121px;
-      height: 230px;
-
-      .oswald(281px, 281px);
-      color: @color-program-background;
-    }
-
-    &--nutrients::after {
-      content: "1";
-    }
-
-    &--cooking-method::after {
-      content: "2";
-    }
-
-    &--meals::after {
-      content: "3";
-    }
-
-    &--changes::after {
-      content: "4";
     }
   }
 }
