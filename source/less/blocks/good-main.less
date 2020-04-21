@@ -1,10 +1,15 @@
+.good-main__list {
+  .list-reset;
+  margin-top: 5px;
+}
+
+
 .good-main {
+  .container;
   display: flex;
   flex-direction: column;
-  padding-right: 6.25%;
   padding-bottom: 25px;
-  padding-left: 6.25%;
-  min-height: 210px;
+  min-height: 209px;
   border-top: 1px solid @color-goods-border;
   border-right: 1px solid @color-goods-border;
   border-left: 1px solid @color-goods-border;
@@ -31,15 +36,15 @@
 
 
 .good-main__image {
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
 
 
 .good-main__text {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: center;
   margin: 0 auto;
   min-width: 50%;
@@ -47,8 +52,8 @@
 
 
 .good-main__title {
-  margin-top: 0;
   width: 80px;
+  margin-top: 0;
   .oswald(16px, 20px);
   text-transform: uppercase;
   color: @color-goods-title;
@@ -84,9 +89,9 @@
 
 .good-main__more-title {
   position: relative;
-  padding-top: 55px;
   margin-bottom: 0;
-  font-size: 16px;
+  padding-top: 62px;
+  .oswald(16px, 20px);
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -95,7 +100,7 @@
   &::after {
     display: block;
     position: absolute;
-    top: 15px;
+    top: 23px;
     left: calc(50% - 16px);
     width: 31px;
     height: 2px;
@@ -104,31 +109,48 @@
   }
 
   &::after {
-    top: 15px;
+    top: 23px;
     transform: rotate(90deg);
   }
 }
 
 
 .good-main__more-description {
-  padding: 0;
   margin-top: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
+  padding: 0;
   text-align: center;
   .arial(12px, 16px);
 }
 
 
+.good-main__order-link {
+  .oswald(16px, 20px);
+  height: 40px;
+  padding-top: 10px;
+}
+
+
 @media (min-width: @width-tablet) {
+  .good-main__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 95px;
+  }
+
+
   .good-main {
+    position: relative;
     justify-content: flex-end;
     min-width: 324px;
     height: 431px;
     margin-top: 70px;
     margin-bottom: 70px;
+    margin: 70px auto;
     padding-right: 37px;
     padding-left: 37px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
     background-color: @color-goods-background-tablet;
 
     &:last-of-type {
@@ -151,18 +173,20 @@
 
 
   .good-main__image {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 42px;
 
     &--small {
-      width: auto;
       height: 172px;
-      margin-top: -58px;
+      margin-top: -47px;
     }
 
     &--large {
-      width: auto;
       height: 208px;
-      margin-top: -80px;
+      margin-top: -81px;
     }
   }
 
@@ -176,8 +200,8 @@
   .good-main__title {
     width: 130px;
     margin: 0 auto;
-    margin-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 32px;
+    padding-bottom: 18px;
     .oswald(20px, 20px);
     text-align: center;
   }
@@ -200,15 +224,15 @@
   .good-main__more-title {
     width: 140px;
     margin: 0 auto;
-    margin-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 32px;
+    padding-bottom: 18px;
     .oswald(20px, 20px);
 
     &::before,
     &::after {
       display: block;
       position: absolute;
-      top: -25px;
+      top: -17px;
       left: calc(50% - 31px);
       width: 61px;
       height: 2px;
@@ -217,7 +241,7 @@
     }
 
     &::after {
-      top: -25px;
+      top: -17px;
       transform: rotate(90deg);
     }
   }
@@ -226,8 +250,8 @@
   .good-main__more-description {
     width: 170px;
     padding: 0;
-    margin-top: 10px;
-    margin-bottom: 85px;
+    margin-top: 9px;
+    margin-bottom: 86px;
     text-align: center;
     .arial(16px, 16px);
   }
@@ -235,7 +259,15 @@
 
 
 @media (min-width: @width-desktop) {
+  .good-main__list {
+    .container;
+    margin-top: 95px;
+    justify-content: space-between;
+  }
+
   .good-main {
+    flex-basis: 245px;
     min-width: 245px;
+    margin: 71px 0;
   }
 }
