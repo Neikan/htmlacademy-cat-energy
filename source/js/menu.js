@@ -1,5 +1,3 @@
-'use strict';
-
 const ClassMarkup = {
   NO_JS: 'navigation--no-js',
   OPENED: 'navigation--opened',

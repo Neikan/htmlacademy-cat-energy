@@ -10,7 +10,6 @@
 
   <body>
     <header class="header header__not-index">
-      <!-- Блок 1.1. Лого и навигация -->
       <div class="header__wrapper">
         <a class="header__logo-link" href="index.html">
           <picture>
@@ -37,9 +36,10 @@
     </header>
 
     <main class="main">
-      <h1 class="main__title">Подбор программы</h1>
-      <p class="main__subtitle">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
-
+      <div class="main__wrapper">
+        <h1 class="main__title">Подбор программы</h1>
+        <p class="main__subtitle">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
+      </div>
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__wrapper">
           <fieldset class="form-feedback__fieldset form-feedback__fieldset--cat-parameters">
@@ -53,8 +53,8 @@
                 <input class="form-feedback__control form-feedback__control--input" type="text" name="weight" id="weight" required placeholder="7">
               </li>
               <li class="form-feedback__item form-feedback__item--cat-parameters">
-                <label class="form-feedback__label form-feedback__label--age" for="age">Возраст&nbsp;(лет):*</label>
-                <input class="form-feedback__control form-feedback__control--input" type="text" name="age" id="age" required placeholder="7">
+                <label class="form-feedback__label form-feedback__label--age" for="age">Возраст&nbsp;(лет):</label>
+                <input class="form-feedback__control form-feedback__control--input" type="text" name="age" id="age" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -214,6 +214,7 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script src="js/form-feedback-validation.js"></script>
     <script src="js/picturefill.min.js" async=""></script>
   </body>
 </html>

@@ -1,24 +1,20 @@
-.main {
-  padding: 0;
-  margin: 0;
+.main__wrapper {
+  .container;
 }
 
 
 .main__title {
-  .container;
   margin: 0;
   padding-top: 15px;
-  padding-bottom: 24px;
+  padding-bottom: 26px;
   .oswald(36px, 60px);
   text-align: left;
   color: @color-main-text;
-
-  border-top: 1px solid @color-main-border;
 }
 
 
 .main__subtitle {
-  .container;
+  margin: 0;
   .oswald(14px, 18px);
   text-align: left;
   text-transform: uppercase;
@@ -34,12 +30,9 @@
   }
 
   .main__subtitle {
-    max-width: 300px;
-    position: relative;
-    display: inline-block;
-    margin-left: 40px;
-    padding-top: 55px;
-    padding-right: 324px;
+    max-width: 400px;
+    padding-top: 31px;
+    padding-left: 40px;
     .oswald(20px, 30px);
   }
 }
@@ -47,11 +40,10 @@
 
 @media (min-width: @width-desktop) {
   .main__title {
-    margin: 0 auto;
     padding-top: 70px;
   }
 
   .main__subtitle {
-    margin-left: 70px;
+    padding-left: 0;
   }
 }
