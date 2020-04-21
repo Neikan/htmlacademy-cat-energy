@@ -53,10 +53,11 @@
   width: 100%;
   height: 400px;
   margin-top: -40px;
-  // добавить пин
-  background-image: url("../img/bg-map-mobile@1x.png");
-  // url("../img/map-pin.png");
-  background-position: center;
+  background-image:
+    url("../img/map-pin.png"),
+    url("../img/bg-map-mobile@1x.png");
+  background-position: center, center;
+  background-size: 55px, auto 400px;
   background-repeat: no-repeat;
   background-color: @color-grey-eighth;
   border: none;
@@ -92,8 +93,11 @@
 
   .contacts__map {
     margin-top: -4px;
-    background-image: url("../img/bg-map-tablet@1x.png");
-    // url("../img/map-pin.png");
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-tablet@1x.png");
+    background-position: center, center;
+    background-size: 124px, auto 400px;
   }
 }
 
@@ -118,9 +122,12 @@
     text-align: left;
   }
 
-  
+
   .contacts__map {
-    background-image: url("../img/bg-map-desktop@1x.png");
-    // url("../img/map-pin.png");
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-desktop@1x.png");
+    background-position: calc(50% - @width-desktop / 2 + 990px) center, center;
+    background-size: 124px, auto 400px;
   }
 }
