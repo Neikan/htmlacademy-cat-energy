@@ -1,8 +1,30 @@
-.container-center() {
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
+.container {
+  min-width: @width-mobile-min;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @width-tablet) {
+    min-width: @width-tablet;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @width-desktop;
+    padding: 0 40px;
+  }
+}
+
+
+.link-reset {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 

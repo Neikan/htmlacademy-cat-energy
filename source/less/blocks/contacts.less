@@ -7,11 +7,19 @@
 
 .contacts__info {
   display: flex;
+  z-index: 5;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
   padding-top: 29px;
+  padding-right: 20px;
   padding-bottom: 26px;
+  padding-left: 20px;
+  background-color: @color-grey-eighth;
+}
+
+
+.contacts__info--index {
+  background-color: @color-background-contrast;
 }
 
 
@@ -42,31 +50,33 @@
 
 
 .contacts__map {
-  margin: 0;
-  padding: 0;
-  height: 400px;
   width: 100%;
-  // добавить пин
-  background-image: url("../img/bg-map-mobile@1x.png");
-  // url("../img/map-pin.png");
-  background-position: center;
+  height: 400px;
+  margin-top: -40px;
+  background-image:
+    url("../img/map-pin.png"),
+    url("../img/bg-map-mobile@1x.png");
+  background-position: center, center;
+  background-size: 55px, auto 400px;
   background-repeat: no-repeat;
+  background-color: @color-grey-eighth;
   border: none;
 }
 
 
 @media (min-width: @width-tablet) {
   .contacts__info {
-    padding-top: 69px;
+    min-height: 201px;
     padding-right: 72px;
-    padding-left: 72px;
-    padding-bottom: 62px;
+    padding-left: 71px;
   }
+
 
   .contacts__description {
     font-size: 20px;
     line-height: 25px;
   }
+
 
   .contacts__address {
     width: 155px;
@@ -75,13 +85,19 @@
     text-align: right;
   }
 
+
   .contacts__street {
     margin-bottom: 20px;
   }
 
+
   .contacts__map {
-    background-image: url("../img/bg-map-tablet@1x.png");
-    // url("../img/map-pin.png");
+    margin-top: -4px;
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-tablet@1x.png");
+    background-position: center, center;
+    background-size: 124px, auto 400px;
   }
 }
 
@@ -89,20 +105,29 @@
 @media (min-width: @width-desktop) {
   .contacts__info {
     position: absolute;
+    flex-grow: 0;
     z-index: 5;
-    top: 95px;
-    left: 110px;
+    top: 92px;
+    left: calc(50% - 610px);
     width: 570px;
-    height: 201px;
-    background-color: @color-social-background-desktop;
+    padding-top: 62px;
+    padding-right: 88px;
+    padding-left: 75px;
+    padding-bottom: 62px;
+    background-color: @color-background-contrast;
   }
+
 
   .contacts__address {
     text-align: left;
   }
 
+
   .contacts__map {
-    background-image: url("../img/bg-map-desktop@1x.png");
-    // url("../img/map-pin.png");
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-desktop@1x.png");
+    background-position: calc(50% - 1300px / 2 + 990px) center, center;
+    background-size: 124px, auto 400px;
   }
 }

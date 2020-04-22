@@ -1,13 +1,7 @@
-.navigation {
-  margin: 0;
-  padding: 0;
-}
-
-
 .navigation__list {
   .list-reset;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -23,15 +17,16 @@
 
 
 .navigation__item {
-  border-top: 1px solid @color-nav-border;
+  border-bottom: 1px solid @color-main-border;
 }
 
 
 .navigation__link {
   .link-reset;
   display: block;
+  margin-bottom: 1px;
   padding-top: 23px;
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   .oswald(20px, 20px, @font-weight-bold);
   color: @color-nav-link-text;
 
@@ -79,9 +74,9 @@
 
 .navigation--closed .navigation__toggle::before {
   position: absolute;
-  top: 23px;
+  top: 22px;
   right: 20px;
-  width: 25px;
+  width: 24px;
   height: 2px;
   content: "";
   background-color: @color-nav-toggle;
@@ -115,8 +110,8 @@
 
 
 @media (min-width: @width-tablet) {
-  .navigation--no-js {
-    display: flex;
+  .navigation__list {
+    flex-direction: row;
   }
 
   .navigation--closed .navigation__list {
@@ -124,9 +119,10 @@
     flex-wrap: wrap;
   }
 
+
   .navigation__item {
     margin-right: 36px;
-    border-top: none;
+    border-bottom: none;
 
     &:last-of-type {
       margin-right: 0;
@@ -136,7 +132,7 @@
 
 
   .navigation__link {
-    padding: 6px 0;
+    padding: 7px 0;
     .oswald(18px, 25px);
     border: none;
 
@@ -170,24 +166,32 @@
 
   .navigation__link {
     .oswald(20px, 25px);
-    color: @colot-text-contrast;
 
-    &[href]:hover,
-    &[href]:focus {
-      color: rgba(@colot-text-contrast, 0.6);
+    &--index {
+      position: relative;
+      color: @color-text-contrast;
     }
 
-    &[href]:focus {
-      .outline;
+    &--index-active {
+      &::after {
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 2px;
+        bottom: -3px;
+        content: "";
+        background-color: @color-text-contrast;
+      }
     }
 
-    &[href]:active {
-      color: rgba(@colot-text-contrast, 0.3);
+    &--index[href]:hover,
+    &--index[href]:focus {
+      color: rgba(@color-text-contrast, 0.6);
+    }
+
+    &--index[href]:active {
+      color: rgba(@color-text-contrast, 0.3);
       outline: none;
-    }
-
-    &--active::after {
-      background-color: @colot-text-contrast;
     }
   }
 }

@@ -1,27 +1,20 @@
-.main {
-  padding: 0;
-  margin: 0;
+.main__wrapper {
+  .container;
 }
 
 
 .main__title {
-  margin: 0 auto;
+  margin: 0;
   padding-top: 15px;
-  padding-bottom: 28px;
-  padding-left: 20px;
+  padding-bottom: 26px;
   .oswald(36px, 60px);
   text-align: left;
   color: @color-main-text;
-
-  border-top: 1px solid @color-main-border;
 }
 
 
 .main__subtitle {
-  // margin-top: 30px;
-  // margin-bottom: 30px;
-  width: 230px;
-  margin: 30px 20px;
+  margin: 0;
   .oswald(14px, 18px);
   text-align: left;
   text-transform: uppercase;
@@ -31,13 +24,26 @@
 
 @media (min-width: @width-tablet) {
   .main__title {
-    padding-left: 30px;
+    padding-top: 52px;
     .oswald(60px, 60px);
     border-top: none;
   }
 
   .main__subtitle {
-    width: 330px;
+    max-width: 400px;
+    padding-top: 31px;
+    padding-left: 40px;
     .oswald(20px, 30px);
+  }
+}
+
+
+@media (min-width: @width-desktop) {
+  .main__title {
+    padding-top: 70px;
+  }
+
+  .main__subtitle {
+    padding-left: 0;
   }
 }
