@@ -6,17 +6,19 @@
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
 
   <body>
-    <header class="header">
+    <header class="header header--index">
       <!-- Блок 1.1. Лого и навигация -->
       <div class="header__wrapper">
         <a class="header__logo-link">
           <picture>
-            <source media="(min-width: 1300px)" srcset="./img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-            <img class="header__logo-image" src="./img/logo-mobile.svg" width="192" height="39" alt="Cat Energy">
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-image" src="img/logo-mobile.svg" width="192" height="39" alt="Cat Energy">
           </picture>
         </a>
         <nav class="header__navigation navigation navigation--no-js navigation--closed">
@@ -40,7 +42,7 @@
           <h2 class="promotion__title">Функциональное питание для котов</h2>
           <p class="promotion__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@1x.png 2x">
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="promotion__image" src="img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy Pro Chicken 500">
           </picture>
@@ -152,25 +154,15 @@
             </div>
             <div class="example__slider slider">
               <div class="slider__pictures">
-                <div class="slider__picture slider__picture--before-left">
-                  <picture>
-                    <source media="(min-width: 1300px)" srcset="img/example/before-left-desktop@1x.png 1x, img/example/before-left-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/example/before-left-tablet@1x.png 1x, img/example/before-left-tablet@2x.png 2x">
-                    <img class="slider__image slider__image--before-left" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="До">
-                  </picture>
-                  <picture>
+                <div class="slider__picture slider__picture--before-wrapper">
+                  <picture">
                     <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                     <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="До">
                   </picture>
                 </div>
-                <div class="slider__picture slider__picture--after-right">
-                  <picture>
-                    <source media="(min-width: 1300px)" srcset="img/example/after-right-desktop@1x.png 1x, img/example/after-right-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/example/after-right-tablet@1x.png 1x, img/example/after-right-tablet@2x.png 2x">
-                    <img class="slider__image slider__image--after-right" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="После">
-                  </picture>
-                  <picture>
+                <div class="slider__picture slider__picture--after-wrapper">
+                  <picture">
                     <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                     <img class="slider__image slider__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="После">

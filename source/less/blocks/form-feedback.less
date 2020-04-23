@@ -168,8 +168,8 @@
 
   &:focus {
     outline: none;
-    border-width: 2px;
     border-color: @color-input-border-active;
+    box-shadow: 1px 1px 0 0 @color-input-border-active, -1px -1px 0 0 @color-input-border-active;
   }
 
   &:focus + .form-feedback__icon {
@@ -380,20 +380,22 @@
 
 .error {
   border-color: @color-element-error;
+  box-shadow: 1px 1px 0 0 @color-element-error, -1px -1px 0 0 @color-element-error;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     border-color: @color-element-error;
-  }
-
-  &:focus {
-    border-color: @color-element-error;
+    box-shadow: 1px 1px 0 0 @color-element-error, -1px -1px 0 0 @color-element-error;
   }
 
   & + .form-feedback__icon {
     fill: @color-element-error;
   }
 
-  &:hover + .form-feedback__icon {
+  &:hover + .form-feedback__icon,
+  &:focus + .form-feedback__icon,
+  &:active + .form-feedback__icon {
     fill: @color-element-error;
   }
 }
