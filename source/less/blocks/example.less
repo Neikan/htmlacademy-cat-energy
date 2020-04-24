@@ -5,6 +5,8 @@
 
 .example__container {
   .container;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .example__wrapper {
@@ -16,8 +18,15 @@
 .example__title {
   margin-bottom: 0;
   padding-top: 19px;
+  padding-right: 20px;
+  padding-left: 20px;
   .oswald(36px, 60px);
   text-align: left;
+}
+
+.example__info {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 
@@ -94,15 +103,29 @@
 
 @media (min-width: @width-tablet) {
   .example {
+    position: relative;
     margin-top: 24px;
-    padding-bottom: 55px;
-    background: linear-gradient(0deg, @color-example-background 462px, @color-background-contrast 0%);
+    background-color: @color-background-contrast;
+  }
+
+
+  .example__container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
 
   .example__title {
+    padding-right: 30px;
+    padding-left: 30px;
     margin-top: 0;
     .oswald(60px, 60px);
+  }
+
+
+  .example__info {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
 
@@ -163,21 +186,26 @@
 
 
   .example__slider {
-    padding-top: 75px;
+    background: linear-gradient(90deg, @color-example-background 50%, @color-example-background-after 50%);
   }
 }
 
 
 @media (min-width: @width-desktop) {
   .example {
-    background: linear-gradient(0deg, @color-example-background 465px, @color-background-contrast 0%);
-    padding-bottom: 38px;
+    margin-top: 163px;
+    background: linear-gradient(90deg, @color-example-background 69%, @color-example-background-after 31%);
   }
 
+  .example__upperground {
+    background-color: @color-background-contrast;
+    padding-bottom: 77px;
+  }
 
   .example__title {
-    padding-top: 11px;
-    margin-bottom: 43px;
+    .container;
+    margin-top: -128px;
+    padding-left: 40px;
   }
 
 
@@ -185,21 +213,22 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    height: 462px;
-    padding-bottom: 37px;
-    // background-color: @color-example-background;
+    margin-top: 5px;
   }
 
 
   .example__info {
     flex-basis: 570px;
+    margin-bottom: 72px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
 
   .example__text {
     width: 440px;
     margin-top: 27px;
-    margin-bottom: 67px;
+    margin-bottom: 69px;
   }
 
 
@@ -236,8 +265,7 @@
 
 
   .example__slider {
-    flex-basis: 570px;
-    margin-left: 80px;
-    padding-top: 0;
+    flex-basis: 630px;
+    background: linear-gradient(90deg, @color-example-background 52.5%, @color-example-background-after 47.5%);
   }
 }
