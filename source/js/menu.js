@@ -1,11 +1,11 @@
 const ClassMarkup = {
-  NO_JS: 'navigation--no-js',
-  OPENED: 'navigation--opened',
-  CLOSED: 'navigation--closed'
+  NO_JS: `navigation--no-js`,
+  OPENED: `navigation--opened`,
+  CLOSED: `navigation--closed`
 }
 
-const navigation = document.querySelector('.navigation');
-const toggle = document.querySelector('.navigation__toggle');
+const navigation = document.querySelector(`.navigation`);
+const toggle = document.querySelector(`.navigation__toggle`);
 
 navigation.classList.remove(ClassMarkup.NO_JS);
 
@@ -19,4 +19,4 @@ const toggleClickHandler = () => {
   }
 };
 
-toggle.addEventListener('click', toggleClickHandler);
+toggle.addEventListener(`click`, toggleClickHandler);
