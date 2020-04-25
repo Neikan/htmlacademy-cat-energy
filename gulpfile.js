@@ -50,11 +50,16 @@ gulp.task("css", function () {
 });
 
 gulp.task("cssmin", function () {
-  return gulp.src("build/css/*.css")
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-    }))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
