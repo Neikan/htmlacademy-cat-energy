@@ -172,6 +172,10 @@
     box-shadow: 1px 1px 0 0 @color-input-border-active, -1px -1px 0 0 @color-input-border-active;
   }
 
+  &:invalid {
+    outline: @color-element-error;
+  }
+
   &:focus + .form-feedback__icon {
     fill: @color-background;
   }
