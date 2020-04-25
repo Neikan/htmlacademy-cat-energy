@@ -1,22 +1,27 @@
-const CLASS_ERROR = `error`;
+var initFormFeedback = function () {
+  var CLASS_ERROR = 'error';
 
-const feedbackBtn = document.querySelector(`.form-feedback__button`);
-const requiredInputs = Array.from(document.querySelectorAll(`input[required]`));
+  var feedbackBtn = document.querySelector('.form-feedback__button');
+  var requiredInputs = document.querySelectorAll('input[required]');
 
-const addErrorClass = () => (requiredInput) => {
-  if (!requiredInput.value) {
-    requiredInput.classList.add(CLASS_ERROR);
+  var feedbackBtnClickHandler = function () {
+    for (var i = 0; i < requiredInputs.length; i++) {
+      if (!requiredInputs[i].value) {
+        requiredInputs[i].classList.add(CLASS_ERROR);
+      }
+    }
   }
-};
 
-const removeErrorClass = () => (requiredInput) => {
-  requiredInput.addEventListener(`input`, function () {
-    this.classList.remove(CLASS_ERROR);
-  });
+  feedbackBtn.addEventListener('click', feedbackBtnClickHandler);
+
+  for (var i = 0; i < requiredInputs.length; i++) {
+    requiredInputs[i].addEventListener('input', function () {
+      this.classList.remove(CLASS_ERROR);
+    })
+  };
 }
 
-const feedbackBtnClickHandler = () => requiredInputs.map(addErrorClass());
 
-feedbackBtn.addEventListener(`click`, feedbackBtnClickHandler);
-
-requiredInputs.map(removeErrorClass());
+if (document.querySelector('.form-feedback')) {
+  initFormFeedback();
+}

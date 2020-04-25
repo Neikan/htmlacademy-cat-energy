@@ -17,6 +17,7 @@ var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var webp = require("gulp-webp");
 var uglify = require("gulp-uglify-es").default;
+var concat = require("gulp-concat");
 
 
 gulp.task("clean", function () {
@@ -27,6 +28,7 @@ gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
+      "source/js/ext/*.js",
       "source/*.ico"
     ], {
       base: "source"
@@ -42,12 +44,26 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("cssmin", function () {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
+
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/icons/icon-*.svg")
@@ -82,13 +98,14 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img/**"));
 });
 
-gulp.task("jsmin", function () {
+gulp.task("jsmin", function() {
   return gulp.src("source/js/*.js")
-    .pipe(uglify())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-    }))
-    .pipe(gulp.dest("build/js"))
+   .pipe(concat('common.js'))
+   .pipe(uglify())
+   .pipe(rename(function (path) {
+     path.basename += ".min";
+   }))
+   .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("server", function () {
@@ -102,7 +119,7 @@ gulp.task("server", function () {
 
   gulp.watch(
     "source/less/**/*.less",
-    gulp.series("css")
+    gulp.series("css", "cssmin")
   );
 
   gulp.watch(
@@ -121,7 +138,7 @@ gulp.task("server", function () {
   );
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "jsmin", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "cssmin", "sprite", "jsmin", "html"));
 
 gulp.task("start", gulp.series("build", "server"));
 
