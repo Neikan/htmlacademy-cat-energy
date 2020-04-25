@@ -1,8 +1,8 @@
- var initFormFeedback = function () {
-   var CLASS_ERROR = 'error';
+var initFormFeedback = function () {
+  var CLASS_ERROR = 'error';
 
-   var feedbackBtn = document.querySelector('.form-feedback__button');
-   var requiredInputs = document.querySelectorAll('input[required]');
+  var feedbackBtn = document.querySelector('.form-feedback__button');
+  var requiredInputs = document.querySelectorAll('input[required]');
 
   var feedbackBtnClickHandler = function () {
     for (var i = 0; i < requiredInputs.length; i++) {
