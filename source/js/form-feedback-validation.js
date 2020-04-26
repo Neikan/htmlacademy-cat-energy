@@ -1,5 +1,5 @@
 var initFormFeedback = function () {
-  var CLASS_ERROR = 'error';
+  var CLASS_ERROR = 'form-feedback__error';
 
   var feedbackBtn = document.querySelector('.form-feedback__button');
   var requiredInputs = document.querySelectorAll('input[required]');

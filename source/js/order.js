@@ -1,7 +1,7 @@
 var initOrder = function () {
   var Order = {
     MODAL: 'order',
-    BTN_MAKE: 'order__btn-make',
+    BTN_MAKE: 'order-btn',
     BTN_CLOSE: 'order__btn-close',
     NO_DISPLAY: 'order--no-display'
   }
