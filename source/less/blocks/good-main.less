@@ -55,11 +55,26 @@
 
 
 .good-main__title {
+  .link-reset;
   width: 80px;
   margin-top: 0;
+  margin-bottom: 12px;
   .oswald(16px, 20px);
   text-transform: uppercase;
   color: @color-goods-title;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:focus {
+    .outline;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+    outline: none;
+  }
 }
 
 
