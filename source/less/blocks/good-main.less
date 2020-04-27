@@ -23,6 +23,24 @@
 }
 
 
+.good-main__link {
+  display: inline-block;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:focus {
+    .outline;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+    outline: none;
+  }
+}
+
+
 .good-main__info {
   display: flex;
 
@@ -192,13 +210,15 @@
     }
   }
 
-
-  .good-main__image {
+  .good-main__link {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .good-main__image {
     width: 100%;
-    margin-bottom: 42px;
+    margin-bottom: 20px;
 
     &--small {
       height: 172px;
@@ -222,6 +242,7 @@
     width: 130px;
     margin: 0 auto;
     margin-top: 32px;
+    padding-top: 18px;
     padding-bottom: 18px;
     .oswald(20px, 20px);
     text-align: center;
